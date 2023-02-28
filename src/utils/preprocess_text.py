@@ -72,7 +72,7 @@ def preprocess(json_data, processor_args, chunk=False):
     preprocessor = Preprocessor(processor_args)
     print('Preprocessing docs')
     for i, data in json_data.items():
-        text = process_scientific_article(data, preprocessor)
+        text = process_scientific_article(data, preprocessor, chunk=chunk)
         if chunk:
             docs['title'].extend([data['title']] * len(text))
             docs['abstract'].extend([data['abstract']] * len(text))
@@ -97,12 +97,12 @@ def preprocess(json_data, processor_args, chunk=False):
 
 if __name__ == '__main__':
     data_path = 'data/balance_corpus.json'
-    save_path = 'data/base_dataset.json'
+    save_path = 'data/chunk_dataset.json'
     with open(data_path) as f:
         data = json.load(f)
     args = {'remove_paran_content': True,
             'remove_pos':["ADV","PRON","CCONJ","PUNCT","PART","DET","ADP","SPACE","NUM","SYM"]}
-    docs = preprocess(json_data=data,processor_args=args)
+    docs = preprocess(json_data=data,processor_args=args, chunk=True)
 
     with open(save_path, "w+") as outfile:
         json.dump(docs, outfile, indent=4, sort_keys=False)
