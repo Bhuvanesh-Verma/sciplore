@@ -1,0 +1,5 @@
+spacy
+nltk
+tqdm
+scikit-learn
+pyyaml
