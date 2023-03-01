@@ -1,21 +1,8 @@
 data_path: data/dataset.json
 feat_type: tfidf # bow, tfidf
-model_type: knn
+model_type: bayes
 params:
-  n_neighbors:
-    - 1
-    - 2
-    - 4
-    - 8
-    - 12
-    - 15
-    - 17
-    - 20
-  weights:
-    - uniform
-    - distance
-  metric:
-    - euclidean
-    - manhattan
-  algorithm:
-    - brute
+  alpha:
+    - 0.1
+    - 1.0
+    - 10
