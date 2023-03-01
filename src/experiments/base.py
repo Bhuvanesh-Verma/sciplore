@@ -6,7 +6,7 @@ from collections import defaultdict
 import pandas as pd
 import yaml
 
-from src.train.base_models import pipeline, get_section_text
+from src.train.base_models import pipeline, get_section_text, str2sections
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Arguments for training base models')
@@ -29,6 +29,7 @@ if __name__ == '__main__':
     with open(data_path) as f:
         data = json.load(f)
 
+    new_data = str2sections(data)
     labels = data['label']
     text = None
     exp_results = defaultdict(lambda: defaultdict())
@@ -39,13 +40,13 @@ if __name__ == '__main__':
         config_data['feat_type'] = feat_type
         for data_type in ['abstract', 'full_text', 'sec-name', 'sec-text']:
             if data_type == 'abstract':
-                text = data['abstract']
+                text = [sec2text['Abstract'] for sec2text in new_data]
             elif data_type == 'full_text':
-                text = data['text']
+                text = data['full_text']
             elif data_type == 'sec-name':
                 text = [' '.join(secs) for secs in data['sections']]
             elif data_type == 'sec-text':
-                text, labels = get_section_text()
+                text = get_section_text(new_data)
             else:
                 ValueError(f'Incorrect data type {data_type}')
             print(f'\nExperiment for Data Type: {data_type} and Feature type: {feat_type}')

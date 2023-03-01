@@ -117,30 +117,28 @@ def get_features(X_train, X_test, feat_type='bow'):
         ValueError(f'Incorrect feature type {feat_type}')
     return X_train, X_test
 
-def get_section_text():
-    corpus_path = 'data/balance_corpus.json'
-    with open(corpus_path) as f:
-        corpus = json.load(f)
+
+def str2sections(data):
+    new_data = []
+
+    for secs, text in zip(data['sections'], data['full_text']):
+        sec2text = defaultdict(str)
+        for sec, txt in zip(secs, text.split('SBA')):
+            sec2text[sec] = txt
+        new_data.append(sec2text)
+
+    return new_data
+def get_section_text(new_data):
     imp_sections = ['Introduction', 'Methodology', 'Conclusion', 'Conclusions', 'Discussion',
                     'Results', 'Concluding remarks', 'Method', 'Data']
     sectioned_data = defaultdict(list)
-    for i, v in corpus.items():
+    for sec2text in new_data:
         text = []
-        for k, txt in v['text'].items():
-            text.extend([txt for s in imp_sections if k in s])
+        for sec, txt in sec2text.items():
+            text.extend([txt for s in imp_sections if sec in s or s in sec])
         sectioned_data['text'].append(' '.join(text))
-        sectioned_data['label'].append(v['label'])
 
-    args = {'remove_paran_content': True,
-            'remove_pos': ["ADV", "PRON", "CCONJ", "PUNCT", "PART", "DET", "ADP", "SPACE", "NUM", "SYM"]}
-
-    preprocessor = Preprocessor(args)
-
-    for i, txt in enumerate(sectioned_data['text']):
-        sectioned_data['text'][i] = preprocessor.preprocess_text(txt)
-    sectioned_data['text'] = preprocessor.pos_preprocessing(docs=sectioned_data['text'])
-
-    return sectioned_data['text'], sectioned_data['label']
+    return sectioned_data['text']
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Arguments for training base models')
@@ -154,7 +152,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '-data_type',
         help='type of data to use for modelling',
-        type=str, default='abstract',
+        type=str, default='sec-text',
     )
 
     args, remaining_args = parser.parse_known_args()
@@ -165,17 +163,19 @@ if __name__ == '__main__':
     data_path = config_data['data_path']
     with open(data_path) as f:
         data = json.load(f)
+
+    new_data = str2sections(data)
     data_type = args.data_type
     labels = data['label']
     text = None
     if data_type == 'abstract':
-        text = data['abstract']
+        text = [sec2text['Abstract'] for sec2text in new_data]
     elif data_type == 'full_text':
-        text = data['text']
+        text = data['full_text']
     elif data_type == 'sec-name':
         text = [' '.join(secs) for secs in data['sections']]
     elif data_type == 'sec-text':
-        text, labels = get_section_text()
+        text = get_section_text(new_data)
     else:
         ValueError(f'Incorrect data type {data_type}')
 
