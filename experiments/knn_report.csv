@@ -1,0 +1,9 @@
+,feature_type,data_type,best_f1,avg_f1,best_accuracy,avg_accuracy,best_params
+0,tfidf,abstract,0.42,0.36,0.5,0.43,"{'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 17, 'weights': 'distance'}"
+1,tfidf,full_text,0.82,0.61,0.83,0.62,"{'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 17, 'weights': 'distance'}"
+2,tfidf,sec-name,0.63,0.49,0.67,0.53,"{'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 4, 'weights': 'uniform'}"
+3,tfidf,sec-text,0.63,0.54,0.67,0.57,"{'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 20, 'weights': 'uniform'}"
+4,bow,abstract,0.48,0.41,0.58,0.5,"{'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 1, 'weights': 'uniform'}"
+5,bow,full_text,0.6,0.45,0.58,0.5,"{'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 1, 'weights': 'uniform'}"
+6,bow,sec-name,0.46,0.3,0.5,0.35,"{'algorithm': 'brute', 'metric': 'manhattan', 'n_neighbors': 20, 'weights': 'uniform'}"
+7,bow,sec-text,0.44,0.38,0.5,0.43,"{'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 1, 'weights': 'uniform'}"
