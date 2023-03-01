@@ -2,39 +2,39 @@
 Experiment for Data Type: abstract and Feature type: tfidf
 
 -------Split 1-------
-Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 15, 'weights': 'distance'}
-Macro F1 score:0.49191919191919187
+Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 4, 'weights': 'uniform'}
+Macro F1 score:0.5650793650793651
 
-Test macro f1 score: 0.3111111111111111
-Test accuracy: 0.4166666666666667
+Test macro f1 score: 0.48340548340548345
+Test accuracy: 0.5
 
 -------Split 2-------
-Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 4, 'weights': 'distance'}
-Macro F1 score:0.45556998556998557
+Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 8, 'weights': 'uniform'}
+Macro F1 score:0.5946031746031746
 
-Test macro f1 score: 0.3162393162393162
-Test accuracy: 0.4166666666666667
+Test macro f1 score: 0.4318181818181818
+Test accuracy: 0.5
 
 -------Split 3-------
-Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 4, 'weights': 'distance'}
-Macro F1 score:0.43015873015873013
+Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 12, 'weights': 'distance'}
+Macro F1 score:0.5317460317460319
 
-Test macro f1 score: 0.3238095238095238
-Test accuracy: 0.3333333333333333
+Test macro f1 score: 0.48340548340548345
+Test accuracy: 0.5
 
 -------Split 4-------
 Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 17, 'weights': 'distance'}
-Macro F1 score:0.5344588744588744
+Macro F1 score:0.6276190476190476
 
-Test macro f1 score: 0.4222222222222222
-Test accuracy: 0.5
+Test macro f1 score: 0.3666666666666667
+Test accuracy: 0.4166666666666667
 
 -------Split 5-------
-Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 17, 'weights': 'distance'}
-Macro F1 score:0.49074074074074076
+Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 12, 'weights': 'distance'}
+Macro F1 score:0.5525396825396826
 
-Test macro f1 score: 0.41269841269841273
-Test accuracy: 0.5
+Test macro f1 score: 0.5786435786435786
+Test accuracy: 0.5833333333333334
 
 Experiment for Data Type: full_text and Feature type: tfidf
 
@@ -42,7 +42,7 @@ Experiment for Data Type: full_text and Feature type: tfidf
 Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 15, 'weights': 'distance'}
 Macro F1 score:0.7304761904761904
 
-Test macro f1 score: 0.5888888888888889
+Test macro f1 score: 0.5793650793650794
 Test accuracy: 0.5833333333333334
 
 -------Split 2-------
@@ -68,7 +68,7 @@ Test accuracy: 0.4166666666666667
 
 -------Split 5-------
 Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 17, 'weights': 'distance'}
-Macro F1 score:0.6544444444444444
+Macro F1 score:0.6336507936507936
 
 Test macro f1 score: 0.5767195767195767
 Test accuracy: 0.5833333333333334
@@ -76,114 +76,113 @@ Test accuracy: 0.5833333333333334
 Experiment for Data Type: sec-name and Feature type: tfidf
 
 -------Split 1-------
-Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 4, 'weights': 'uniform'}
-Macro F1 score:0.5506349206349206
+Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 8, 'weights': 'distance'}
+Macro F1 score:0.552962962962963
 
-Test macro f1 score: 0.5444444444444444
-Test accuracy: 0.5833333333333334
+Test macro f1 score: 0.6551226551226552
+Test accuracy: 0.6666666666666666
 
 -------Split 2-------
-Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 4, 'weights': 'uniform'}
-Macro F1 score:0.5684126984126984
+Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 4, 'weights': 'distance'}
+Macro F1 score:0.6173015873015872
 
-Test macro f1 score: 0.40740740740740744
-Test accuracy: 0.4166666666666667
+Test macro f1 score: 0.20454545454545456
+Test accuracy: 0.25
 
 -------Split 3-------
-Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 8, 'weights': 'distance'}
-Macro F1 score:0.5596825396825396
+Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 15, 'weights': 'distance'}
+Macro F1 score:0.5385185185185184
 
-Test macro f1 score: 0.5444444444444444
-Test accuracy: 0.5833333333333334
+Test macro f1 score: 0.3376623376623377
+Test accuracy: 0.4166666666666667
 
 -------Split 4-------
-Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 15, 'weights': 'uniform'}
-Macro F1 score:0.6342857142857142
+Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 15, 'weights': 'distance'}
+Macro F1 score:0.6373015873015874
 
-Test macro f1 score: 0.3238095238095238
-Test accuracy: 0.4166666666666667
+Test macro f1 score: 0.5606837606837606
+Test accuracy: 0.5833333333333334
 
 -------Split 5-------
 Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 4, 'weights': 'uniform'}
-Macro F1 score:0.46952380952380945
+Macro F1 score:0.5077777777777778
 
-Test macro f1 score: 0.6257575757575758
-Test accuracy: 0.6666666666666666
-POS preprocessing
+Test macro f1 score: 0.39999999999999997
+Test accuracy: 0.5
 
 Experiment for Data Type: sec-text and Feature type: tfidf
 
 -------Split 1-------
-Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 17, 'weights': 'uniform'}
-Macro F1 score:0.6687301587301586
+Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 15, 'weights': 'uniform'}
+Macro F1 score:0.6614285714285714
 
-Test macro f1 score: 0.49338624338624343
-Test accuracy: 0.5
-
--------Split 2-------
-Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 8, 'weights': 'uniform'}
-Macro F1 score:0.5255555555555554
-
-Test macro f1 score: 0.5424242424242425
+Test macro f1 score: 0.5555555555555555
 Test accuracy: 0.5833333333333334
 
--------Split 3-------
-Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 20, 'weights': 'uniform'}
-Macro F1 score:0.4963492063492064
+-------Split 2-------
+Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 1, 'weights': 'uniform'}
+Macro F1 score:0.6296825396825396
 
-Test macro f1 score: 0.6277777777777778
-Test accuracy: 0.6666666666666666
+Test macro f1 score: 0.3952380952380952
+Test accuracy: 0.4166666666666667
+
+-------Split 3-------
+Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 17, 'weights': 'distance'}
+Macro F1 score:0.65
+
+Test macro f1 score: 0.7367724867724869
+Test accuracy: 0.75
 
 -------Split 4-------
-Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 17, 'weights': 'distance'}
-Macro F1 score:0.6584126984126983
+Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 15, 'weights': 'distance'}
+Macro F1 score:0.6438095238095237
 
-Test macro f1 score: 0.4777777777777778
+Test macro f1 score: 0.4444444444444444
 Test accuracy: 0.5
 
 -------Split 5-------
-Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 17, 'weights': 'uniform'}
-Macro F1 score:0.6687301587301586
+Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 15, 'weights': 'uniform'}
+Macro F1 score:0.7520634920634921
 
-Test macro f1 score: 0.5611111111111111
-Test accuracy: 0.5833333333333334
+Test macro f1 score: 0.6296296296296295
+Test accuracy: 0.6666666666666666
 
 Experiment for Data Type: abstract and Feature type: bow
 
 -------Split 1-------
-Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 8, 'weights': 'distance'}
-Macro F1 score:0.4356613756613757
+Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 4, 'weights': 'uniform'}
+Macro F1 score:0.5142857142857143
 
-Test macro f1 score: 0.25
+Test macro f1 score: 0.17777777777777778
 Test accuracy: 0.3333333333333333
 
 -------Split 2-------
-Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 4, 'weights': 'distance'}
-Macro F1 score:0.41214526214526215
+Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 1, 'weights': 'uniform'}
+Macro F1 score:0.5307407407407407
 
-Test macro f1 score: 0.4646464646464646
+Test macro f1 score: 0.49242424242424243
 Test accuracy: 0.5833333333333334
 
 -------Split 3-------
 Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 4, 'weights': 'uniform'}
-Macro F1 score:0.3548821548821549
+Macro F1 score:0.43571428571428567
 
-Test macro f1 score: 0.3956043956043956
+Test macro f1 score: 0.4777777777777778
 Test accuracy: 0.5
 
 -------Split 4-------
-Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 8, 'weights': 'distance'}
-Macro F1 score:0.34244829244829245
+Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 4, 'weights': 'distance'}
+Macro F1 score:0.41017316017316025
 
-Test macro f1 score: 0.4666666666666666
-Test accuracy: 0.5833333333333334
+Test macro f1 score: 0.32996632996632996
+Test accuracy: 0.4166666666666667
 
 -------Split 5-------
 Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 1, 'weights': 'uniform'}
-Macro F1 score:0.42740740740740735
+Macro F1 score:0.4193650793650794
 
-Test macro f1 score: 0.48148148148148157
-Test accuracy: 0.5
+Test macro f1 score: 0.47222222222222215
+Test accuracy: 0.5833333333333334
 
 Experiment for Data Type: full_text and Feature type: bow
 
@@ -195,11 +194,11 @@ Test macro f1 score: 0.16666666666666666
 Test accuracy: 0.3333333333333333
 
 -------Split 2-------
-Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 1, 'weights': 'uniform'}
-Macro F1 score:0.5353968253968253
+Best hyperparameters: {'algorithm': 'brute', 'metric': 'manhattan', 'n_neighbors': 17, 'weights': 'uniform'}
+Macro F1 score:0.5529629629629629
 
-Test macro f1 score: 0.6005291005291006
-Test accuracy: 0.5833333333333334
+Test macro f1 score: 0.7503607503607502
+Test accuracy: 0.75
 
 -------Split 3-------
 Best hyperparameters: {'algorithm': 'brute', 'metric': 'manhattan', 'n_neighbors': 15, 'weights': 'distance'}
@@ -209,90 +208,89 @@ Test macro f1 score: 0.49999999999999994
 Test accuracy: 0.5
 
 -------Split 4-------
-Best hyperparameters: {'algorithm': 'brute', 'metric': 'manhattan', 'n_neighbors': 20, 'weights': 'distance'}
-Macro F1 score:0.5511111111111111
+Best hyperparameters: {'algorithm': 'brute', 'metric': 'manhattan', 'n_neighbors': 17, 'weights': 'uniform'}
+Macro F1 score:0.5493650793650794
 
 Test macro f1 score: 0.4908424908424908
 Test accuracy: 0.5833333333333334
 
 -------Split 5-------
-Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 12, 'weights': 'distance'}
-Macro F1 score:0.5525396825396826
+Best hyperparameters: {'algorithm': 'brute', 'metric': 'manhattan', 'n_neighbors': 15, 'weights': 'distance'}
+Macro F1 score:0.5626984126984127
 
-Test macro f1 score: 0.49999999999999994
-Test accuracy: 0.5
+Test macro f1 score: 0.39829059829059826
+Test accuracy: 0.4166666666666667
 
 Experiment for Data Type: sec-name and Feature type: bow
 
 -------Split 1-------
-Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 1, 'weights': 'uniform'}
-Macro F1 score:0.40858585858585855
+Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 2, 'weights': 'distance'}
+Macro F1 score:0.5244444444444444
 
-Test macro f1 score: 0.14285714285714282
+Test macro f1 score: 0.13333333333333333
 Test accuracy: 0.25
 
 -------Split 2-------
 Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 1, 'weights': 'uniform'}
-Macro F1 score:0.43668109668109667
+Macro F1 score:0.47526695526695517
 
-Test macro f1 score: 0.3666666666666667
-Test accuracy: 0.4166666666666667
+Test macro f1 score: 0.21645021645021645
+Test accuracy: 0.25
 
 -------Split 3-------
 Best hyperparameters: {'algorithm': 'brute', 'metric': 'manhattan', 'n_neighbors': 20, 'weights': 'uniform'}
-Macro F1 score:0.31902356902356904
+Macro F1 score:0.35668109668109665
 
-Test macro f1 score: 0.45714285714285713
-Test accuracy: 0.5
+Test macro f1 score: 0.3238095238095238
+Test accuracy: 0.4166666666666667
 
 -------Split 4-------
-Best hyperparameters: {'algorithm': 'brute', 'metric': 'manhattan', 'n_neighbors': 17, 'weights': 'uniform'}
-Macro F1 score:0.45
+Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 1, 'weights': 'uniform'}
+Macro F1 score:0.4415488215488216
 
-Test macro f1 score: 0.13333333333333333
-Test accuracy: 0.16666666666666666
+Test macro f1 score: 0.41005291005291006
+Test accuracy: 0.4166666666666667
 
 -------Split 5-------
-Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 8, 'weights': 'distance'}
-Macro F1 score:0.3496296296296296
+Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 4, 'weights': 'distance'}
+Macro F1 score:0.4635978835978836
 
-Test macro f1 score: 0.4212121212121212
+Test macro f1 score: 0.3162393162393162
 Test accuracy: 0.4166666666666667
-POS preprocessing
 
 Experiment for Data Type: sec-text and Feature type: bow
 
 -------Split 1-------
-Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 15, 'weights': 'distance'}
-Macro F1 score:0.4904906204906204
+Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 4, 'weights': 'distance'}
+Macro F1 score:0.5374747474747474
 
-Test macro f1 score: 0.4222222222222222
+Test macro f1 score: 0.4495726495726496
 Test accuracy: 0.5
 
 -------Split 2-------
-Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 1, 'weights': 'uniform'}
-Macro F1 score:0.4412698412698412
+Best hyperparameters: {'algorithm': 'brute', 'metric': 'manhattan', 'n_neighbors': 12, 'weights': 'uniform'}
+Macro F1 score:0.41873015873015873
 
-Test macro f1 score: 0.38888888888888884
+Test macro f1 score: 0.3111111111111111
 Test accuracy: 0.4166666666666667
 
 -------Split 3-------
-Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 1, 'weights': 'uniform'}
-Macro F1 score:0.48396825396825394
+Best hyperparameters: {'algorithm': 'brute', 'metric': 'manhattan', 'n_neighbors': 15, 'weights': 'uniform'}
+Macro F1 score:0.5803174603174603
 
-Test macro f1 score: 0.4444444444444444
-Test accuracy: 0.4166666666666667
+Test macro f1 score: 0.4777777777777777
+Test accuracy: 0.5
 
 -------Split 4-------
-Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 15, 'weights': 'distance'}
-Macro F1 score:0.43715728715728713
+Best hyperparameters: {'algorithm': 'brute', 'metric': 'manhattan', 'n_neighbors': 1, 'weights': 'uniform'}
+Macro F1 score:0.4847619047619047
 
-Test macro f1 score: 0.3333333333333333
-Test accuracy: 0.4166666666666667
+Test macro f1 score: 0.6761904761904761
+Test accuracy: 0.6666666666666666
 
 -------Split 5-------
-Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 15, 'weights': 'uniform'}
-Macro F1 score:0.4325396825396825
+Best hyperparameters: {'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 20, 'weights': 'distance'}
+Macro F1 score:0.45968253968253964
 
-Test macro f1 score: 0.32996632996632996
-Test accuracy: 0.4166666666666667
+Test macro f1 score: 0.6296296296296297
+Test accuracy: 0.6666666666666666
