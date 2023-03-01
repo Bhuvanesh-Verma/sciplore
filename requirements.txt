@@ -3,3 +3,8 @@ nltk
 tqdm
 scikit-learn
 pyyaml
+transformers
+pandas
+fasttext
+gensim
+# install torch based on your system requirements

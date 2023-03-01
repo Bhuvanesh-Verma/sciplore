@@ -1,0 +1,2 @@
+data_path: data/dataset.json
+model_name: MoritzLaurer/mDeBERTa-v3-base-mnli-xnli # joeddav/xlm-roberta-large-xnli, MoritzLaurer/mDeBERTa-v3-base-mnli-xnli, facebook/bart-large-mnli
