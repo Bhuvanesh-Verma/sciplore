@@ -1,0 +1,298 @@
+
+Experiment for Data Type: abstract and Feature type: tfidf
+
+-------Split 1-------
+Best hyperparameters: {'C': 10, 'gamma': 0.1, 'kernel': 'linear'}
+Macro F1 score:0.47825396825396815
+
+Test macro f1 score: 0.5611111111111111
+Test accuracy: 0.5833333333333334
+
+-------Split 2-------
+Best hyperparameters: {'C': 10, 'gamma': 0.1, 'kernel': 'linear'}
+Macro F1 score:0.43361231361231356
+
+Test macro f1 score: 0.7090909090909091
+Test accuracy: 0.75
+
+-------Split 3-------
+Best hyperparameters: {'C': 10, 'gamma': 0.1, 'kernel': 'linear'}
+Macro F1 score:0.5152380952380954
+
+Test macro f1 score: 0.5793650793650794
+Test accuracy: 0.5833333333333334
+
+-------Split 4-------
+Best hyperparameters: {'C': 0.1, 'gamma': 0.1, 'kernel': 'rbf'}
+Macro F1 score:0.5683597883597884
+
+Test macro f1 score: 0.48571428571428577
+Test accuracy: 0.5
+
+-------Split 5-------
+Best hyperparameters: {'C': 1, 'gamma': 0.1, 'kernel': 'linear'}
+Macro F1 score:0.5383597883597884
+
+Test macro f1 score: 0.5786435786435786
+Test accuracy: 0.5833333333333334
+
+Experiment for Data Type: full_text and Feature type: tfidf
+
+-------Split 1-------
+Best hyperparameters: {'C': 10, 'gamma': 0.1, 'kernel': 'linear'}
+Macro F1 score:0.6101587301587301
+
+Test macro f1 score: 0.6626984126984127
+Test accuracy: 0.6666666666666666
+
+-------Split 2-------
+Best hyperparameters: {'C': 1, 'gamma': 1, 'kernel': 'rbf'}
+Macro F1 score:0.5036652236652237
+
+Test macro f1 score: 0.6962962962962963
+Test accuracy: 0.75
+
+-------Split 3-------
+Best hyperparameters: {'C': 10, 'gamma': 0.1, 'kernel': 'linear'}
+Macro F1 score:0.5763492063492064
+
+Test macro f1 score: 0.832010582010582
+Test accuracy: 0.8333333333333334
+
+-------Split 4-------
+Best hyperparameters: {'C': 10, 'gamma': 0.1, 'kernel': 'linear'}
+Macro F1 score:0.6126984126984125
+
+Test macro f1 score: 0.6476190476190476
+Test accuracy: 0.6666666666666666
+
+-------Split 5-------
+Best hyperparameters: {'C': 10, 'gamma': 0.1, 'kernel': 'linear'}
+Macro F1 score:0.5847619047619047
+
+Test macro f1 score: 0.6444444444444445
+Test accuracy: 0.6666666666666666
+
+Experiment for Data Type: sec-name and Feature type: tfidf
+
+-------Split 1-------
+Best hyperparameters: {'C': 1, 'gamma': 0.1, 'kernel': 'linear'}
+Macro F1 score:0.65015873015873
+
+Test macro f1 score: 0.6222222222222222
+Test accuracy: 0.6666666666666666
+
+-------Split 2-------
+Best hyperparameters: {'C': 10, 'gamma': 0.1, 'kernel': 'linear'}
+Macro F1 score:0.557936507936508
+
+Test macro f1 score: 0.7579365079365079
+Test accuracy: 0.75
+
+-------Split 3-------
+Best hyperparameters: {'C': 10, 'gamma': 0.1, 'kernel': 'linear'}
+Macro F1 score:0.5565079365079365
+
+Test macro f1 score: 0.6962962962962963
+Test accuracy: 0.75
+
+-------Split 4-------
+Best hyperparameters: {'C': 10, 'gamma': 0.1, 'kernel': 'linear'}
+Macro F1 score:0.7241269841269841
+
+Test macro f1 score: 0.6551226551226552
+Test accuracy: 0.6666666666666666
+
+-------Split 5-------
+Best hyperparameters: {'C': 10, 'gamma': 0.1, 'kernel': 'linear'}
+Macro F1 score:0.570952380952381
+
+Test macro f1 score: 0.9153439153439153
+Test accuracy: 0.9166666666666666
+POS preprocessing
+
+Experiment for Data Type: sec-text and Feature type: tfidf
+
+-------Split 1-------
+Best hyperparameters: {'C': 10, 'gamma': 0.1, 'kernel': 'rbf'}
+Macro F1 score:0.49111111111111105
+
+Test macro f1 score: 0.6626984126984127
+Test accuracy: 0.6666666666666666
+
+-------Split 2-------
+Best hyperparameters: {'C': 0.1, 'gamma': 0.1, 'kernel': 'linear'}
+Macro F1 score:0.5611111111111111
+
+Test macro f1 score: 0.6222222222222222
+Test accuracy: 0.6666666666666666
+
+-------Split 3-------
+Best hyperparameters: {'C': 0.1, 'gamma': 1, 'kernel': 'rbf'}
+Macro F1 score:0.5999999999999999
+
+Test macro f1 score: 0.6626984126984127
+Test accuracy: 0.6666666666666666
+
+-------Split 4-------
+Best hyperparameters: {'C': 10, 'gamma': 0.1, 'kernel': 'rbf'}
+Macro F1 score:0.725079365079365
+
+Test macro f1 score: 0.5052910052910053
+Test accuracy: 0.5
+
+-------Split 5-------
+Best hyperparameters: {'C': 1, 'gamma': 0.1, 'kernel': 'linear'}
+Macro F1 score:0.6690476190476191
+
+Test macro f1 score: 0.580952380952381
+Test accuracy: 0.5833333333333334
+
+Experiment for Data Type: abstract and Feature type: bow
+
+-------Split 1-------
+Best hyperparameters: {'C': 0.1, 'gamma': 0.1, 'kernel': 'linear'}
+Macro F1 score:0.6161904761904762
+
+Test macro f1 score: 0.2878787878787879
+Test accuracy: 0.3333333333333333
+
+-------Split 2-------
+Best hyperparameters: {'C': 0.1, 'gamma': 0.1, 'kernel': 'linear'}
+Macro F1 score:0.4745502645502645
+
+Test macro f1 score: 0.8148148148148149
+Test accuracy: 0.8333333333333334
+
+-------Split 3-------
+Best hyperparameters: {'C': 0.1, 'gamma': 0.1, 'kernel': 'linear'}
+Macro F1 score:0.3974603174603174
+
+Test macro f1 score: 0.5793650793650794
+Test accuracy: 0.5833333333333334
+
+-------Split 4-------
+Best hyperparameters: {'C': 0.1, 'gamma': 0.1, 'kernel': 'linear'}
+Macro F1 score:0.5174218374218374
+
+Test macro f1 score: 0.4888888888888889
+Test accuracy: 0.5833333333333334
+
+-------Split 5-------
+Best hyperparameters: {'C': 0.1, 'gamma': 0.1, 'kernel': 'linear'}
+Macro F1 score:0.6388888888888888
+
+Test macro f1 score: 0.4675324675324675
+Test accuracy: 0.5
+
+Experiment for Data Type: full_text and Feature type: bow
+
+-------Split 1-------
+Best hyperparameters: {'C': 0.1, 'gamma': 0.1, 'kernel': 'linear'}
+Macro F1 score:0.5917460317460317
+
+Test macro f1 score: 0.3333333333333333
+Test accuracy: 0.4166666666666667
+
+-------Split 2-------
+Best hyperparameters: {'C': 0.1, 'gamma': 0.1, 'kernel': 'linear'}
+Macro F1 score:0.496984126984127
+
+Test macro f1 score: 0.7579365079365079
+Test accuracy: 0.75
+
+-------Split 3-------
+Best hyperparameters: {'C': 0.1, 'gamma': 0.1, 'kernel': 'linear'}
+Macro F1 score:0.629047619047619
+
+Test macro f1 score: 0.832010582010582
+Test accuracy: 0.8333333333333334
+
+-------Split 4-------
+Best hyperparameters: {'C': 0.1, 'gamma': 0.1, 'kernel': 'linear'}
+Macro F1 score:0.599062049062049
+
+Test macro f1 score: 0.5444444444444444
+Test accuracy: 0.5833333333333334
+
+-------Split 5-------
+Best hyperparameters: {'C': 0.1, 'gamma': 0.1, 'kernel': 'linear'}
+Macro F1 score:0.6031746031746031
+
+Test macro f1 score: 0.5786435786435786
+Test accuracy: 0.5833333333333334
+
+Experiment for Data Type: sec-name and Feature type: bow
+
+-------Split 1-------
+Best hyperparameters: {'C': 0.1, 'gamma': 0.1, 'kernel': 'linear'}
+Macro F1 score:0.4520105820105821
+
+Test macro f1 score: 0.4227994227994228
+Test accuracy: 0.4166666666666667
+
+-------Split 2-------
+Best hyperparameters: {'C': 0.1, 'gamma': 0.1, 'kernel': 'linear'}
+Macro F1 score:0.4696825396825396
+
+Test macro f1 score: 0.5555555555555555
+Test accuracy: 0.5833333333333334
+
+-------Split 3-------
+Best hyperparameters: {'C': 0.1, 'gamma': 0.1, 'kernel': 'linear'}
+Macro F1 score:0.38465608465608464
+
+Test macro f1 score: 0.6534391534391535
+Test accuracy: 0.6666666666666666
+
+-------Split 4-------
+Best hyperparameters: {'C': 0.1, 'gamma': 0.1, 'kernel': 'linear'}
+Macro F1 score:0.5395238095238095
+
+Test macro f1 score: 0.5444444444444444
+Test accuracy: 0.5833333333333334
+
+-------Split 5-------
+Best hyperparameters: {'C': 0.1, 'gamma': 0.1, 'kernel': 'linear'}
+Macro F1 score:0.5363492063492064
+
+Test macro f1 score: 0.44957264957264953
+Test accuracy: 0.5
+POS preprocessing
+
+Experiment for Data Type: sec-text and Feature type: bow
+
+-------Split 1-------
+Best hyperparameters: {'C': 0.1, 'gamma': 0.1, 'kernel': 'linear'}
+Macro F1 score:0.40391534391534395
+
+Test macro f1 score: 0.5
+Test accuracy: 0.5
+
+-------Split 2-------
+Best hyperparameters: {'C': 0.1, 'gamma': 0.1, 'kernel': 'linear'}
+Macro F1 score:0.33984126984126983
+
+Test macro f1 score: 0.44444444444444436
+Test accuracy: 0.5
+
+-------Split 3-------
+Best hyperparameters: {'C': 0.1, 'gamma': 0.1, 'kernel': 'linear'}
+Macro F1 score:0.43460317460317466
+
+Test macro f1 score: 0.6626984126984127
+Test accuracy: 0.6666666666666666
+
+-------Split 4-------
+Best hyperparameters: {'C': 0.1, 'gamma': 0.1, 'kernel': 'linear'}
+Macro F1 score:0.5582539682539683
+
+Test macro f1 score: 0.48340548340548345
+Test accuracy: 0.5
+
+-------Split 5-------
+Best hyperparameters: {'C': 0.1, 'gamma': 0.1, 'kernel': 'linear'}
+Macro F1 score:0.4235978835978836
+
+Test macro f1 score: 0.6296296296296295
+Test accuracy: 0.6666666666666666

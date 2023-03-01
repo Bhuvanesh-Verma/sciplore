@@ -1,0 +1,9 @@
+,feature_type,data_type,best_f1,avg_f1,best_accuracy,avg_accuracy,best_params
+0,tfidf,abstract,0.71,0.58,0.75,0.6,"{'C': 10, 'gamma': 0.1, 'kernel': 'linear'}"
+1,tfidf,full_text,0.83,0.7,0.83,0.72,"{'C': 10, 'gamma': 0.1, 'kernel': 'linear'}"
+2,tfidf,sec-name,0.92,0.73,0.92,0.75,"{'C': 10, 'gamma': 0.1, 'kernel': 'linear'}"
+3,tfidf,sec-text,0.66,0.61,0.67,0.62,"{'C': 10, 'gamma': 0.1, 'kernel': 'rbf'}"
+4,bow,abstract,0.81,0.53,0.83,0.57,"{'C': 0.1, 'gamma': 0.1, 'kernel': 'linear'}"
+5,bow,full_text,0.83,0.61,0.83,0.63,"{'C': 0.1, 'gamma': 0.1, 'kernel': 'linear'}"
+6,bow,sec-name,0.65,0.53,0.67,0.55,"{'C': 0.1, 'gamma': 0.1, 'kernel': 'linear'}"
+7,bow,sec-text,0.66,0.54,0.67,0.57,"{'C': 0.1, 'gamma': 0.1, 'kernel': 'linear'}"
