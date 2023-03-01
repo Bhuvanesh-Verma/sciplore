@@ -103,7 +103,7 @@ def pipeline(text, labels, config):
             best_acc = accuracy
         f1s.append(f_score)
         accs.append(accuracy)
-    stats = {'best_f1': best_f1, 'avg_f1': np.around(np.mean(f1s), 2), 'best_accuracy': best_acc,
+    stats = {'best_f1': np.around(best_f1,2), 'avg_f1': np.around(np.mean(f1s), 2), 'best_accuracy': np.around(best_acc,2),
              'avg_accuracy': np.around(np.mean(accs),2), 'best_params': best_params}
     return stats
 
