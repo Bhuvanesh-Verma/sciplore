@@ -1,15 +1,21 @@
 data_path: data/dataset.json
 feat_type: tfidf # bow, tfidf
-model_type: svm
+model_type: knn
 params:
-  C:
-    - 0.1
+  n_neighbors:
     - 1
-    - 10
-  gamma:
-    - 0.1
-    - 1
-    - 10
-  kernel:
-    - linear
-    - rbf
+    - 2
+    - 4
+    - 8
+    - 12
+    - 15
+    - 17
+    - 20
+  weights:
+    - uniform
+    - distance
+  metric:
+    - euclidean
+    - manhattan
+  algorithm:
+    - brute
