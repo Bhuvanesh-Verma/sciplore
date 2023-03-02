@@ -7,8 +7,9 @@ import pandas as pd
 import torch
 import yaml
 
-from src.train.base_models import pipeline, get_section_text, str2sections
-from src.train.zero_shot import zs_full_text
+from src.train.base_models import get_section_text, str2sections
+from src.train.zero_shot import zs_auto, zs_manual
+
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Arguments for zero shot experiments')
@@ -41,16 +42,29 @@ if __name__ == '__main__':
 
     sys.stdout = open(f'logs/{model_name}_exp.txt', 'w')
 
-    for data_type in ['abstract', 'full_text', 'sec-text']:
-        if data_type == 'abstract':
-            text = [sec2text['Abstract'] for sec2text in new_data]
-        elif data_type == 'full_text':
-            text = data['full_text']
-        elif data_type == 'sec-text':
-            text = get_section_text(new_data)
-        else:
-            ValueError(f'Incorrect data type {data_type}')
-        print(f'\nExperiment for Data Type: {data_type}')
-        exp_results[data_type] = zs_full_text(text, labels, config_data["model_name"])
+    for exp_type in ['auto', 'manual']:
+        for data_type in ['abstract', 'full_text', 'sec-text']:
+            if data_type == 'abstract':
+                text = [sec2text['Abstract'] for sec2text in new_data]
+            elif data_type == 'full_text':
+                text = data['full_text']
+            elif data_type == 'sec-text':
+                text = get_section_text(new_data)
+            else:
+                ValueError(f'Incorrect data type {data_type}')
+            print(f'\nExperiment for Data Type: {data_type}')
+            if exp_type == 'auto':
+                exp_results[exp_type][data_type] = zs_auto(text, labels, config_data["model_name"], config_data['max_token'])
+            elif exp_type == 'manual':
+                exp_results[exp_type][data_type] = zs_manual(text, labels, config_data["model_name"],
+                                                           config_data['max_token'])
+            else:
+                ValueError(f'Incorrect data type {exp_type}')
 
-    pd.DataFrame(exp_results).T.to_csv(f'experiments/{model_name}_report.csv')
+        #pd.DataFrame(exp_results).T.to_csv(f'experiments/{model_name}_report.csv')
+        rows = []
+        for exp_type, class_data in exp_results.items():
+            for data_type, results in class_data.items():
+                row = (exp_type, data_type, results['f1_score'],results['accuracy'])
+                rows.append(row)
+        pd.DataFrame(rows, columns=['experiment_type', 'data_type', 'f1_score', 'accuracy']).to_csv(f'experiments/{model_name}_report.csv')
