@@ -35,7 +35,7 @@ if __name__ == '__main__':
         config_data['model_name'] = model_name
         print(f'{model_name}')
         for exp_type in ['auto', 'manual']:
-            config_data['exp_name'] = exp_type
+            config_data['exp_type'] = exp_type
             for data_type in ['abstract', 'full_text','sec-name', 'sec-text']:
                 print(f'\nExperiment Type: {exp_type} for Data Type: {data_type} ')
                 exp_results[model_name][exp_type][data_type] = zs_pipeline(dataset, data_type, config_data)
