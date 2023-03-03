@@ -6,7 +6,8 @@ from collections import defaultdict
 import pandas as pd
 import yaml
 
-from src.train.base_models import pipeline, get_section_text, str2sections
+from src.data.sci_dataset import SciDataset
+from src.train.base_models import pipeline
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Arguments for training base models')
@@ -23,41 +24,27 @@ if __name__ == '__main__':
     with open(args.config) as file:
         config_data = yaml.safe_load(file)
 
-    model_type = config_data['model_type']
-    data_path = config_data['data_path']
 
-    with open(data_path) as f:
-        data = json.load(f)
+    dataset = SciDataset()
 
-    new_data = str2sections(data)
-    labels = data['label']
-    text = None
-    exp_results = defaultdict(lambda: defaultdict())
-
-    sys.stdout = open(f'logs/{model_type}_exp.txt', 'w')
-
-    for feat_type in ['tfidf', 'bow']:
-        config_data['feat_type'] = feat_type
-        for data_type in ['abstract', 'full_text', 'sec-name', 'sec-text']:
-            if data_type == 'abstract':
-                text = [sec2text['Abstract'] for sec2text in new_data]
-            elif data_type == 'full_text':
-                text = data['full_text']
-            elif data_type == 'sec-name':
-                text = [' '.join(secs) for secs in data['sections']]
-            elif data_type == 'sec-text':
-                text = get_section_text(new_data)
-            else:
-                ValueError(f'Incorrect data type {data_type}')
-            print(f'\nExperiment for Data Type: {data_type} and Feature type: {feat_type}')
-            exp_results[feat_type][data_type] = pipeline(text, labels, config_data)
+    exp_results = defaultdict(lambda: defaultdict(lambda: defaultdict()))
+    sys.stdout = open(f'logs/base_models_exp.txt', 'w')
+    for model_type in ['svm', 'knn', 'bayes']:
+        config_data['model_type'] = model_type
+        config_data['params'] = config_data[model_type]
+        for feat_type in ['tfidf', 'bow']:
+            config_data['feat_type'] = feat_type
+            for data_type in ['abstract', 'full_text', 'sec-name', 'sec-text']:
+                print(f'\nExperiment for Data Type: {data_type} and Feature type: {feat_type}')
+                exp_results[model_type][feat_type][data_type] = pipeline(dataset, data_type, config_data)
 
     rows = []
-    for feat_type, class_data in exp_results.items():
-        for data_type, results in class_data.items():
-            row = (feat_type, data_type, results['best_f1'], results['avg_f1'],
-                   results['best_accuracy'],results['avg_accuracy'],results['best_params'])
-            rows.append(row)
-    pd.DataFrame(rows, columns=['feature_type', 'data_type', 'best_f1', 'avg_f1',
+    for model_type, exp_result in exp_results.items():
+        for feat_type, class_data in exp_result.items():
+            for data_type, results in class_data.items():
+                row = (model_type, feat_type, data_type, results['best_f1'], results['avg_f1'],
+                       results['best_accuracy'],results['avg_accuracy'],results['best_params'])
+                rows.append(row)
+    pd.DataFrame(rows, columns=['model_type','feature_type', 'data_type', 'best_f1', 'avg_f1',
                                 'best_accuracy', 'avg_accuracy',
-                                'best_params']).to_csv(f'experiments/{model_type}_report.csv')
+                                'best_params']).to_csv(f'experiments/base_models_report.csv')
