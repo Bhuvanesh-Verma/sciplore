@@ -85,8 +85,8 @@ class SciDataset():
         else:
             ValueError(f'Incorrect type {type} mentioned. Use "alpha" or "numeric".')
 
-    def get_text_label(self, data_type):
-        labels = self.get_label()
+    def get_text_label(self, data_type, label_type='alpha'):
+        labels = self.get_label(label_type)
         text = None
         if data_type == 'abstract':
             text = self.get_abstract(type='clean')
@@ -101,8 +101,8 @@ class SciDataset():
 
         return text, labels
 
-    def get_train_test_split(self, data_type, n_splits = 5):
-        text, label = self.get_text_label(data_type)
+    def get_train_test_split(self, data_type, label_type='alpha', n_splits = 5):
+        text, label = self.get_text_label(data_type, label_type)
         sss = StratifiedShuffleSplit(n_splits=n_splits, test_size=0.2, random_state=42)
         for train_index, test_index in sss.split(text, label):
             X_train, X_test = [text[i] for i in train_index], [text[i] for i in test_index]
