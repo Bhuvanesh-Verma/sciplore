@@ -8,7 +8,7 @@ from transformers import pipeline
 from sklearn.metrics import f1_score, accuracy_score, classification_report
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
-from src.train.base_models import get_section_text, str2sections
+from src.data.sci_dataset import SciDataset
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 def predict(nli_model, tokenizer, sequence, labels):
@@ -101,6 +101,15 @@ def zs_auto(texts, labels, model_name, max_token):
     print(classification_report(labels, preds))
     return {'f1_score':f1, 'accuracy': acc}
 
+def zs_pipeline(dataset, data_type, config_data):
+    text, labels = dataset.get_text_label(data_type)
+    if config_data["exp_type"] == 'auto':
+        return zs_auto(text, labels, config_data["model_name"], config_data['max_token'])
+    elif config_data["exp_type"] == 'manual':
+        return zs_manual(text, labels, config_data["model_name"], config_data['max_token'])
+    else:
+        ValueError(f'Incorrect experiment type {config_data["exp_type"]}')
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Arguments for zero shot')
 
@@ -116,31 +125,14 @@ if __name__ == '__main__':
         type=str, default='abstract',
     )
 
+
     args, remaining_args = parser.parse_known_args()
 
     with open(args.config) as file:
         config_data = yaml.safe_load(file)
 
-    data_path = config_data['data_path']
-    with open(data_path) as f:
-        data = json.load(f)
+    dataset = SciDataset()
 
-    labels = data['label']
-    for i, lab in enumerate(labels):
-        if lab == 'Mixed':
-            labels[i] = 'Qualitative and Quantitative'
-    new_data = str2sections(data)
+    print(zs_pipeline(dataset, args.data_type, config_data))
 
-    data_type = args.data_type
-    texts = None
-    if data_type == 'abstract':
-        texts = [sec2text['Abstract'] for sec2text in new_data]
-    elif data_type == 'full_text':
-        texts = data['full_text']
-    elif data_type == 'sec-text':
-        texts = get_section_text(new_data)
-    else:
-        ValueError(f'Incorrect data type {data_type}')
 
-    #zs_full_text(texts, labels, config_data["model_name"], config_data['max_token'])
-    print(zs_manual(texts, labels, config_data["model_name"], config_data['max_token']))
