@@ -3,11 +3,12 @@ import json
 import sys
 from collections import defaultdict
 
+import numpy as np
 import pandas as pd
 import torch
 import yaml
 
-from src.train.base_models import get_section_text, str2sections
+from src.data.sci_dataset import SciDataset
 from src.train.few_shot import pipeline
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -25,28 +26,26 @@ if __name__ == '__main__':
     with open(args.config) as file:
         config_data = yaml.safe_load(file)
 
-    data_path = config_data['data_path']
-    with open(data_path) as f:
-        data = json.load(f)
-
-    new_data = str2sections(data)
-
-    labels = data['label']
-    text = None
+    dataset = SciDataset()
 
     exp_results = defaultdict(lambda: defaultdict())
 
-    sys.stdout = open(f'logs/few_shot_exp.txt', 'w')
+    sys.stdout = open(f'logs/few_shot_models_exp.txt', 'w')
 
-    for data_type in ['abstract', 'sec-text']:
-        if data_type == 'abstract':
-            text = [sec2text['Abstract'] for sec2text in new_data]
-        elif data_type == 'sec-text':
-            text = get_section_text(new_data)
-        else:
-            ValueError(f'Incorrect data type {data_type}')
-        print(f'\nExperiment for Data Type: {data_type}')
+    for model_name in ['sentence-transformers/paraphrase-mpnet-base-v2', 'sentence-transformers/all-mpnet-base-v2', ]:
+        config_data['model_name'] = model_name
+        print(model_name)
+        for data_type in ['abstract', 'sec-name']:
+            print(f'\nExperiment for Data Type: {data_type}')
+            exp_results[model_name][data_type] = pipeline(dataset, data_type, config_data)
 
-        exp_results[data_type] = pipeline(text, labels, config_data)
+    #pd.DataFrame(exp_results).T.to_csv(f'experiments/few_shot_report.csv')
+    rows = []
+    for model_type, exp_result in exp_results.items():
+        for data_type, results in exp_result.items():
+            row = (model_type, data_type, results['best_accuracy'], results['avg_accuracy'], results['best_f1'],
+                   results['avg_f1'])
+            rows.append(row)
 
-        pd.DataFrame(exp_results).T.to_csv(f'experiments/few_shot_report.csv')
+    pd.DataFrame(rows, columns=['model_type', 'data_type', 'best_accuracy', 'avg_accuracy',
+                                'best_f1', 'avg_f1']).to_csv(f'experiments/few_shot_models_report.csv')

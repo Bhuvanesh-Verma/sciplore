@@ -1,3 +1,3 @@
 data_path: data/dataset.json
-model_name: facebook/bart-large-mnli # joeddav/xlm-roberta-large-xnli, MoritzLaurer/mDeBERTa-v3-base-mnli-xnli, facebook/bart-large-mnli
+model_name: sentence-transformers/paraphrase-mpnet-base-v2 # joeddav/xlm-roberta-large-xnli, MoritzLaurer/mDeBERTa-v3-base-mnli-xnli, facebook/bart-large-mnli
 max_token: 512
