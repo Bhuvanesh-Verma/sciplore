@@ -32,6 +32,7 @@ if __name__ == '__main__':
     for model_type in ['svm', 'knn', 'bayes']:
         config_data['model_type'] = model_type
         config_data['params'] = config_data[model_type]
+        print(f'{model_type}')
         for feat_type in ['tfidf', 'bow']:
             config_data['feat_type'] = feat_type
             for data_type in ['abstract', 'full_text', 'sec-name', 'sec-text']:

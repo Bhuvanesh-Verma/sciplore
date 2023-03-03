@@ -1,3 +1,4 @@
+svm
 
 Experiment for Data Type: abstract and Feature type: tfidf
 
@@ -294,6 +295,7 @@ Macro F1 score:0.5199999999999999
 
 Test macro f1 score: 0.6296296296296297
 Test accuracy: 0.6666666666666666
+knn
 
 Experiment for Data Type: abstract and Feature type: tfidf
 
@@ -590,6 +592,7 @@ Macro F1 score:0.45439153439153446
 
 Test macro f1 score: 0.580952380952381
 Test accuracy: 0.5833333333333334
+bayes
 
 Experiment for Data Type: abstract and Feature type: tfidf
 
