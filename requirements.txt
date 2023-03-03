@@ -7,4 +7,6 @@ transformers
 pandas
 fasttext
 gensim
+setfit
+datasets
 # install torch based on your system requirements
