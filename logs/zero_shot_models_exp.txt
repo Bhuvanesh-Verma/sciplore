@@ -1,0 +1,527 @@
+joeddav/xlm-roberta-large-xnli
+
+Experiment Type: auto for Data Type: abstract 
+Document 7 skipped
+Document 9 skipped
+Document 10 skipped
+Document 11 skipped
+Document 15 skipped
+Document 17 skipped
+Document 20 skipped
+Document 24 skipped
+Document 26 skipped
+Document 27 skipped
+Document 29 skipped
+Document 30 skipped
+Document 33 skipped
+Document 36 skipped
+Document 37 skipped
+Document 40 skipped
+Document 44 skipped
+Document 48 skipped
+Document 51 skipped
+Document 52 skipped
+Document 53 skipped
+Document 54 skipped
+Document 56 skipped
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.41      1.00      0.58        13
+Qualitative and Quantitative       0.00      0.00      0.00        11
+                Quantitative       0.50      0.10      0.17        10
+
+                    accuracy                           0.41        34
+                   macro avg       0.30      0.37      0.25        34
+                weighted avg       0.30      0.41      0.27        34
+
+
+Experiment Type: auto for Data Type: full_text 
+Document 54 skipped
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.33      0.74      0.45        19
+Qualitative and Quantitative       0.31      0.22      0.26        18
+                Quantitative       0.00      0.00      0.00        19
+
+                    accuracy                           0.32        56
+                   macro avg       0.21      0.32      0.24        56
+                weighted avg       0.21      0.32      0.24        56
+
+
+Experiment Type: auto for Data Type: sec-name 
+Document 2 skipped
+Document 9 skipped
+Document 10 skipped
+Document 12 skipped
+Document 13 skipped
+Document 14 skipped
+Document 17 skipped
+Document 18 skipped
+Document 30 skipped
+Document 37 skipped
+Document 42 skipped
+Document 47 skipped
+Document 52 skipped
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.25      1.00      0.40        11
+Qualitative and Quantitative       0.00      0.00      0.00        16
+                Quantitative       0.00      0.00      0.00        17
+
+                    accuracy                           0.25        44
+                   macro avg       0.08      0.33      0.13        44
+                weighted avg       0.06      0.25      0.10        44
+
+
+Experiment Type: auto for Data Type: sec-text 
+Document 8 skipped
+Document 11 skipped
+Document 21 skipped
+Document 36 skipped
+Document 45 skipped
+Document 50 skipped
+Document 51 skipped
+Document 52 skipped
+Document 55 skipped
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.35      0.71      0.47        17
+Qualitative and Quantitative       0.14      0.14      0.14        14
+                Quantitative       0.00      0.00      0.00        17
+
+                    accuracy                           0.29        48
+                   macro avg       0.17      0.28      0.20        48
+                weighted avg       0.17      0.29      0.21        48
+
+
+Experiment Type: manual for Data Type: abstract 
+Document 7 skipped
+Document 9 skipped
+Document 10 skipped
+Document 11 skipped
+Document 15 skipped
+Document 17 skipped
+Document 20 skipped
+Document 24 skipped
+Document 26 skipped
+Document 27 skipped
+Document 29 skipped
+Document 30 skipped
+Document 33 skipped
+Document 36 skipped
+Document 37 skipped
+Document 40 skipped
+Document 44 skipped
+Document 48 skipped
+Document 51 skipped
+Document 52 skipped
+Document 53 skipped
+Document 54 skipped
+Document 56 skipped
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.41      1.00      0.58        13
+Qualitative and Quantitative       0.00      0.00      0.00        11
+                Quantitative       0.50      0.10      0.17        10
+
+                    accuracy                           0.41        34
+                   macro avg       0.30      0.37      0.25        34
+                weighted avg       0.30      0.41      0.27        34
+
+
+Experiment Type: manual for Data Type: full_text 
+Document 54 skipped
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.33      0.74      0.45        19
+Qualitative and Quantitative       0.31      0.22      0.26        18
+                Quantitative       0.00      0.00      0.00        19
+
+                    accuracy                           0.32        56
+                   macro avg       0.21      0.32      0.24        56
+                weighted avg       0.21      0.32      0.24        56
+
+
+Experiment Type: manual for Data Type: sec-name 
+Document 2 skipped
+Document 9 skipped
+Document 10 skipped
+Document 12 skipped
+Document 13 skipped
+Document 14 skipped
+Document 17 skipped
+Document 18 skipped
+Document 30 skipped
+Document 37 skipped
+Document 42 skipped
+Document 47 skipped
+Document 52 skipped
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.25      1.00      0.40        11
+Qualitative and Quantitative       0.00      0.00      0.00        16
+                Quantitative       0.00      0.00      0.00        17
+
+                    accuracy                           0.25        44
+                   macro avg       0.08      0.33      0.13        44
+                weighted avg       0.06      0.25      0.10        44
+
+
+Experiment Type: manual for Data Type: sec-text 
+Document 8 skipped
+Document 11 skipped
+Document 21 skipped
+Document 36 skipped
+Document 45 skipped
+Document 50 skipped
+Document 51 skipped
+Document 52 skipped
+Document 55 skipped
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.35      0.71      0.47        17
+Qualitative and Quantitative       0.14      0.14      0.14        14
+                Quantitative       0.00      0.00      0.00        17
+
+                    accuracy                           0.29        48
+                   macro avg       0.17      0.28      0.20        48
+                weighted avg       0.17      0.29      0.21        48
+
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli
+
+Experiment Type: auto for Data Type: abstract 
+Document 0 skipped
+Document 2 skipped
+Document 3 skipped
+Document 4 skipped
+Document 8 skipped
+Document 11 skipped
+Document 12 skipped
+Document 13 skipped
+Document 15 skipped
+Document 20 skipped
+Document 26 skipped
+Document 27 skipped
+Document 28 skipped
+Document 29 skipped
+Document 30 skipped
+Document 33 skipped
+Document 36 skipped
+Document 41 skipped
+Document 44 skipped
+Document 46 skipped
+Document 53 skipped
+Document 55 skipped
+Document 56 skipped
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.00      0.00      0.00        10
+Qualitative and Quantitative       0.43      0.46      0.44        13
+                Quantitative       0.41      0.64      0.50        11
+
+                    accuracy                           0.38        34
+                   macro avg       0.28      0.37      0.31        34
+                weighted avg       0.30      0.38      0.33        34
+
+
+Experiment Type: auto for Data Type: full_text 
+Document 33 skipped
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.00      0.00      0.00        19
+Qualitative and Quantitative       0.33      0.11      0.16        19
+                Quantitative       0.32      0.89      0.47        18
+
+                    accuracy                           0.32        56
+                   macro avg       0.22      0.33      0.21        56
+                weighted avg       0.22      0.32      0.21        56
+
+
+Experiment Type: auto for Data Type: sec-name 
+Document 5 skipped
+Document 7 skipped
+Document 12 skipped
+Document 13 skipped
+Document 14 skipped
+Document 18 skipped
+Document 19 skipped
+Document 20 skipped
+Document 22 skipped
+Document 23 skipped
+Document 25 skipped
+Document 30 skipped
+Document 40 skipped
+Document 41 skipped
+Document 42 skipped
+Document 53 skipped
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.00      0.00      0.00        13
+Qualitative and Quantitative       0.27      0.20      0.23        15
+                Quantitative       0.28      0.62      0.38        13
+
+                    accuracy                           0.27        41
+                   macro avg       0.18      0.27      0.20        41
+                weighted avg       0.19      0.27      0.21        41
+
+
+Experiment Type: auto for Data Type: sec-text 
+Document 1 skipped
+Document 5 skipped
+Document 8 skipped
+Document 10 skipped
+Document 12 skipped
+Document 14 skipped
+Document 18 skipped
+Document 24 skipped
+Document 33 skipped
+Document 36 skipped
+Document 37 skipped
+Document 39 skipped
+Document 41 skipped
+Document 43 skipped
+Document 49 skipped
+Document 50 skipped
+Document 51 skipped
+Document 52 skipped
+Document 54 skipped
+Document 55 skipped
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.50      0.17      0.25        12
+Qualitative and Quantitative       0.46      0.60      0.52        10
+                Quantitative       0.55      0.73      0.63        15
+
+                    accuracy                           0.51        37
+                   macro avg       0.50      0.50      0.47        37
+                weighted avg       0.51      0.51      0.48        37
+
+
+Experiment Type: manual for Data Type: abstract 
+Document 0 skipped
+Document 2 skipped
+Document 3 skipped
+Document 4 skipped
+Document 8 skipped
+Document 11 skipped
+Document 12 skipped
+Document 13 skipped
+Document 15 skipped
+Document 20 skipped
+Document 26 skipped
+Document 27 skipped
+Document 28 skipped
+Document 29 skipped
+Document 30 skipped
+Document 33 skipped
+Document 36 skipped
+Document 41 skipped
+Document 44 skipped
+Document 46 skipped
+Document 53 skipped
+Document 55 skipped
+Document 56 skipped
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.00      0.00      0.00        10
+Qualitative and Quantitative       0.43      0.46      0.44        13
+                Quantitative       0.41      0.64      0.50        11
+
+                    accuracy                           0.38        34
+                   macro avg       0.28      0.37      0.31        34
+                weighted avg       0.30      0.38      0.33        34
+
+
+Experiment Type: manual for Data Type: full_text 
+Document 33 skipped
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.00      0.00      0.00        19
+Qualitative and Quantitative       0.33      0.11      0.16        19
+                Quantitative       0.32      0.89      0.47        18
+
+                    accuracy                           0.32        56
+                   macro avg       0.22      0.33      0.21        56
+                weighted avg       0.22      0.32      0.21        56
+
+
+Experiment Type: manual for Data Type: sec-name 
+Document 5 skipped
+Document 7 skipped
+Document 12 skipped
+Document 13 skipped
+Document 14 skipped
+Document 18 skipped
+Document 19 skipped
+Document 20 skipped
+Document 22 skipped
+Document 23 skipped
+Document 25 skipped
+Document 30 skipped
+Document 40 skipped
+Document 41 skipped
+Document 42 skipped
+Document 53 skipped
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.00      0.00      0.00        13
+Qualitative and Quantitative       0.27      0.20      0.23        15
+                Quantitative       0.28      0.62      0.38        13
+
+                    accuracy                           0.27        41
+                   macro avg       0.18      0.27      0.20        41
+                weighted avg       0.19      0.27      0.21        41
+
+
+Experiment Type: manual for Data Type: sec-text 
+Document 1 skipped
+Document 5 skipped
+Document 8 skipped
+Document 10 skipped
+Document 12 skipped
+Document 14 skipped
+Document 18 skipped
+Document 24 skipped
+Document 33 skipped
+Document 36 skipped
+Document 37 skipped
+Document 39 skipped
+Document 41 skipped
+Document 43 skipped
+Document 49 skipped
+Document 50 skipped
+Document 51 skipped
+Document 52 skipped
+Document 54 skipped
+Document 55 skipped
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.50      0.17      0.25        12
+Qualitative and Quantitative       0.46      0.60      0.52        10
+                Quantitative       0.55      0.73      0.63        15
+
+                    accuracy                           0.51        37
+                   macro avg       0.50      0.50      0.47        37
+                weighted avg       0.51      0.51      0.48        37
+
+facebook/bart-large-mnli
+
+Experiment Type: auto for Data Type: abstract 
+Document 30 skipped
+Document 47 skipped
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.36      0.95      0.52        19
+Qualitative and Quantitative       0.50      0.06      0.10        18
+                Quantitative       0.33      0.06      0.10        18
+
+                    accuracy                           0.36        55
+                   macro avg       0.40      0.35      0.24        55
+                weighted avg       0.40      0.36      0.24        55
+
+
+Experiment Type: auto for Data Type: full_text 
+Document 41 skipped
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.64      0.95      0.77        19
+Qualitative and Quantitative       0.50      0.33      0.40        18
+                Quantitative       0.69      0.58      0.63        19
+
+                    accuracy                           0.62        56
+                   macro avg       0.61      0.62      0.60        56
+                weighted avg       0.61      0.62      0.60        56
+
+
+Experiment Type: auto for Data Type: sec-name 
+Document 7 skipped
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.34      1.00      0.51        18
+Qualitative and Quantitative       1.00      0.05      0.10        19
+                Quantitative       0.00      0.00      0.00        19
+
+                    accuracy                           0.34        56
+                   macro avg       0.45      0.35      0.20        56
+                weighted avg       0.45      0.34      0.20        56
+
+
+Experiment Type: auto for Data Type: sec-text 
+Document 3 skipped
+Document 9 skipped
+Document 29 skipped
+Document 32 skipped
+Document 41 skipped
+Document 43 skipped
+Document 49 skipped
+Document 52 skipped
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.52      1.00      0.68        17
+Qualitative and Quantitative       0.83      0.33      0.48        15
+                Quantitative       0.90      0.53      0.67        17
+
+                    accuracy                           0.63        49
+                   macro avg       0.75      0.62      0.61        49
+                weighted avg       0.75      0.63      0.61        49
+
+
+Experiment Type: manual for Data Type: abstract 
+Document 30 skipped
+Document 47 skipped
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.36      0.95      0.52        19
+Qualitative and Quantitative       0.50      0.06      0.10        18
+                Quantitative       0.33      0.06      0.10        18
+
+                    accuracy                           0.36        55
+                   macro avg       0.40      0.35      0.24        55
+                weighted avg       0.40      0.36      0.24        55
+
+
+Experiment Type: manual for Data Type: full_text 
+Document 41 skipped
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.64      0.95      0.77        19
+Qualitative and Quantitative       0.50      0.33      0.40        18
+                Quantitative       0.69      0.58      0.63        19
+
+                    accuracy                           0.62        56
+                   macro avg       0.61      0.62      0.60        56
+                weighted avg       0.61      0.62      0.60        56
+
+
+Experiment Type: manual for Data Type: sec-name 
+Document 7 skipped
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.34      1.00      0.51        18
+Qualitative and Quantitative       1.00      0.05      0.10        19
+                Quantitative       0.00      0.00      0.00        19
+
+                    accuracy                           0.34        56
+                   macro avg       0.45      0.35      0.20        56
+                weighted avg       0.45      0.34      0.20        56
+
+
+Experiment Type: manual for Data Type: sec-text 
+Document 3 skipped
+Document 9 skipped
+Document 29 skipped
+Document 32 skipped
+Document 41 skipped
+Document 43 skipped
+Document 49 skipped
+Document 52 skipped
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.52      1.00      0.68        17
+Qualitative and Quantitative       0.83      0.33      0.48        15
+                Quantitative       0.90      0.53      0.67        17
+
+                    accuracy                           0.63        49
+                   macro avg       0.75      0.62      0.61        49
+                weighted avg       0.75      0.63      0.61        49
+
