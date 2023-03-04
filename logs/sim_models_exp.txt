@@ -1,0 +1,194 @@
+sentence-transformers/paraphrase-mpnet-base-v2
+
+Experiment with chunked embedding and Data Type: abstract 
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.67      0.32      0.43        19
+Qualitative and Quantitative       0.33      0.63      0.44        19
+                Quantitative       0.33      0.21      0.26        19
+
+                    accuracy                           0.39        57
+                   macro avg       0.44      0.39      0.37        57
+                weighted avg       0.44      0.39      0.37        57
+
+
+Experiment with chunked embedding and Data Type: full_text 
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.43      0.16      0.23        19
+Qualitative and Quantitative       0.40      0.95      0.56        19
+                Quantitative       0.60      0.16      0.25        19
+
+                    accuracy                           0.42        57
+                   macro avg       0.48      0.42      0.35        57
+                weighted avg       0.48      0.42      0.35        57
+
+
+Experiment with chunked embedding and Data Type: sec-name 
+                              precision    recall  f1-score   support
+
+                 Qualitative       1.00      0.26      0.42        19
+Qualitative and Quantitative       0.42      0.68      0.52        19
+                Quantitative       0.48      0.53      0.50        19
+
+                    accuracy                           0.49        57
+                   macro avg       0.63      0.49      0.48        57
+                weighted avg       0.63      0.49      0.48        57
+
+
+Experiment with chunked embedding and Data Type: sec-text 
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.50      0.26      0.34        19
+Qualitative and Quantitative       0.35      0.79      0.48        19
+                Quantitative       0.25      0.05      0.09        19
+
+                    accuracy                           0.37        57
+                   macro avg       0.37      0.37      0.31        57
+                weighted avg       0.37      0.37      0.31        57
+
+
+Experiment with avg embedding and Data Type: abstract 
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.67      0.32      0.43        19
+Qualitative and Quantitative       0.33      0.63      0.44        19
+                Quantitative       0.33      0.21      0.26        19
+
+                    accuracy                           0.39        57
+                   macro avg       0.44      0.39      0.37        57
+                weighted avg       0.44      0.39      0.37        57
+
+
+Experiment with avg embedding and Data Type: full_text 
+                              precision    recall  f1-score   support
+
+                 Qualitative       1.00      0.05      0.10        19
+Qualitative and Quantitative       0.36      0.95      0.52        19
+                Quantitative       0.33      0.11      0.16        19
+
+                    accuracy                           0.37        57
+                   macro avg       0.56      0.37      0.26        57
+                weighted avg       0.56      0.37      0.26        57
+
+
+Experiment with avg embedding and Data Type: sec-name 
+                              precision    recall  f1-score   support
+
+                 Qualitative       1.00      0.26      0.42        19
+Qualitative and Quantitative       0.42      0.68      0.52        19
+                Quantitative       0.48      0.53      0.50        19
+
+                    accuracy                           0.49        57
+                   macro avg       0.63      0.49      0.48        57
+                weighted avg       0.63      0.49      0.48        57
+
+
+Experiment with avg embedding and Data Type: sec-text 
+                              precision    recall  f1-score   support
+
+                 Qualitative       1.00      0.11      0.19        19
+Qualitative and Quantitative       0.37      0.95      0.53        19
+                Quantitative       0.33      0.11      0.16        19
+
+                    accuracy                           0.39        57
+                   macro avg       0.57      0.39      0.29        57
+                weighted avg       0.57      0.39      0.29        57
+
+sentence-transformers/all-mpnet-base-v2
+
+Experiment with chunked embedding and Data Type: abstract 
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.41      1.00      0.58        19
+Qualitative and Quantitative       0.29      0.11      0.15        19
+                Quantitative       0.75      0.16      0.26        19
+
+                    accuracy                           0.42        57
+                   macro avg       0.48      0.42      0.33        57
+                weighted avg       0.48      0.42      0.33        57
+
+
+Experiment with chunked embedding and Data Type: full_text 
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.62      0.42      0.50        19
+Qualitative and Quantitative       0.41      0.95      0.57        19
+                Quantitative       0.00      0.00      0.00        19
+
+                    accuracy                           0.46        57
+                   macro avg       0.34      0.46      0.36        57
+                weighted avg       0.34      0.46      0.36        57
+
+
+Experiment with chunked embedding and Data Type: sec-name 
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.49      0.95      0.64        19
+Qualitative and Quantitative       0.50      0.16      0.24        19
+                Quantitative       0.50      0.37      0.42        19
+
+                    accuracy                           0.49        57
+                   macro avg       0.50      0.49      0.44        57
+                weighted avg       0.50      0.49      0.44        57
+
+
+Experiment with chunked embedding and Data Type: sec-text 
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.58      0.37      0.45        19
+Qualitative and Quantitative       0.38      0.89      0.53        19
+                Quantitative       0.00      0.00      0.00        19
+
+                    accuracy                           0.42        57
+                   macro avg       0.32      0.42      0.33        57
+                weighted avg       0.32      0.42      0.33        57
+
+
+Experiment with avg embedding and Data Type: abstract 
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.41      1.00      0.58        19
+Qualitative and Quantitative       0.29      0.11      0.15        19
+                Quantitative       0.75      0.16      0.26        19
+
+                    accuracy                           0.42        57
+                   macro avg       0.48      0.42      0.33        57
+                weighted avg       0.48      0.42      0.33        57
+
+
+Experiment with avg embedding and Data Type: full_text 
+                              precision    recall  f1-score   support
+
+                 Qualitative       1.00      0.26      0.42        19
+Qualitative and Quantitative       0.37      1.00      0.54        19
+                Quantitative       0.00      0.00      0.00        19
+
+                    accuracy                           0.42        57
+                   macro avg       0.46      0.42      0.32        57
+                weighted avg       0.46      0.42      0.32        57
+
+
+Experiment with avg embedding and Data Type: sec-name 
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.49      0.95      0.64        19
+Qualitative and Quantitative       0.50      0.16      0.24        19
+                Quantitative       0.50      0.37      0.42        19
+
+                    accuracy                           0.49        57
+                   macro avg       0.50      0.49      0.44        57
+                weighted avg       0.50      0.49      0.44        57
+
+
+Experiment with avg embedding and Data Type: sec-text 
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.86      0.32      0.46        19
+Qualitative and Quantitative       0.38      1.00      0.55        19
+                Quantitative       0.00      0.00      0.00        19
+
+                    accuracy                           0.44        57
+                   macro avg       0.41      0.44      0.34        57
+                weighted avg       0.41      0.44      0.34        57
+
