@@ -1,0 +1,17 @@
+,model_name,embed_type,data_type,f1_score,accuracy
+0,sentence-transformers/paraphrase-mpnet-base-v2,chunked,abstract,0.37,0.39
+1,sentence-transformers/paraphrase-mpnet-base-v2,chunked,full_text,0.35,0.42
+2,sentence-transformers/paraphrase-mpnet-base-v2,chunked,sec-name,0.48,0.49
+3,sentence-transformers/paraphrase-mpnet-base-v2,chunked,sec-text,0.31,0.37
+4,sentence-transformers/paraphrase-mpnet-base-v2,avg,abstract,0.37,0.39
+5,sentence-transformers/paraphrase-mpnet-base-v2,avg,full_text,0.26,0.37
+6,sentence-transformers/paraphrase-mpnet-base-v2,avg,sec-name,0.48,0.49
+7,sentence-transformers/paraphrase-mpnet-base-v2,avg,sec-text,0.29,0.39
+8,sentence-transformers/all-mpnet-base-v2,chunked,abstract,0.33,0.42
+9,sentence-transformers/all-mpnet-base-v2,chunked,full_text,0.36,0.46
+10,sentence-transformers/all-mpnet-base-v2,chunked,sec-name,0.44,0.49
+11,sentence-transformers/all-mpnet-base-v2,chunked,sec-text,0.33,0.42
+12,sentence-transformers/all-mpnet-base-v2,avg,abstract,0.33,0.42
+13,sentence-transformers/all-mpnet-base-v2,avg,full_text,0.32,0.42
+14,sentence-transformers/all-mpnet-base-v2,avg,sec-name,0.44,0.49
+15,sentence-transformers/all-mpnet-base-v2,avg,sec-text,0.34,0.44
