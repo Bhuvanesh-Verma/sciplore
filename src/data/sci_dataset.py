@@ -5,6 +5,8 @@ from collections import defaultdict
 import yaml
 from sklearn.model_selection import StratifiedShuffleSplit
 
+from src.utils.data_preprocessor import Preprocessor
+
 
 class SciDataset():
 
@@ -14,12 +16,26 @@ class SciDataset():
             self.data = json.load(f)
         f.close()
         self.fix_mixed_label()
+        self.preprocess_labels()
         self.label2idx = {label:i for i, label in enumerate(sorted(set(self.data['label'])))}
         self.idx2label = {i:label for label, i in self.label2idx.items()}
 
         self.sep = 'SBA'
 
-
+    def preprocess_labels(self):
+        ## Source : https://core.ac.uk/download/pdf/234627217.pdf https://www.ucg.ac.me/skladiste/blog_609332/objava_105202/fajlovi/Creswell.pdf
+        with open('data/labels.json') as f:
+            self.label_data = json.load(f)
+        args = {'remove_paran_content': True,
+                'remove_pos': ["ADV", "PRON", "CCONJ", "PUNCT", "PART", "DET", "ADP", "SPACE", "NUM", "SYM"]}
+        preprocessor = Preprocessor(args)
+        quan_p = preprocessor.preprocess_text(self.label_data['Quantitative'])
+        qual_p = preprocessor.preprocess_text(self.label_data['Qualitative'])
+        mix_p = preprocessor.preprocess_text(self.label_data['Qualitative and Quantitative'])
+        qual, quan, mix = preprocessor.pos_preprocessing(docs=[qual_p, quan_p, mix_p])
+        self.label_data['Quantitative'] = quan
+        self.label_data['Qualitative'] = qual
+        self.label_data['Qualitative and Quantitative'] = mix
     def get_sectioned_text(self):
         new_data = []
 
