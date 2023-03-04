@@ -1,0 +1,3 @@
+model_name: sentence-transformers/paraphrase-mpnet-base-v2
+max_token: 500
+chunk: True
