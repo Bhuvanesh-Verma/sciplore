@@ -16,8 +16,8 @@ def predict(nli_model, tokenizer, sequence, labels):
     nli_model = nli_model.to(device)
     premise = sequence
     #hypothesis = {label: f'The given text follows {label} approach.' for label in labels}
-    hypothesis = { 'Quantitative': """The approach in the given text is primarily numerical using statistical methods and relies on measurements and calculations.""",
-                   'Qualitative': """The approach in the given text is primarily focused on understanding subjective experiences and social phenomena using interviews, 
+    hypothesis = { 'Quantitative': """Quantitative is primarily numerical using statistical methods and relies on measurements and calculations.""",
+                   'Qualitative': """Qualitative is primarily focused on understanding subjective experiences and social phenomena using interviews, 
                    observations, or case studies.""",
                    }
     results = defaultdict(list)
