@@ -1,0 +1,19 @@
+,model_type,feature_type,data_type,best_f1,avg_f1,best_accuracy,avg_accuracy,best_params
+0,svm,tfidf,abstract,0.58,0.46,0.58,0.47,"{'C': 1, 'gamma': 0.1, 'kernel': 'linear'}"
+1,svm,tfidf,full_text,0.67,0.54,0.67,0.55,"{'C': 10, 'gamma': 0.1, 'kernel': 'linear'}"
+2,svm,tfidf,sec-text,0.71,0.54,0.75,0.57,"{'C': 1, 'gamma': 0.1, 'kernel': 'linear'}"
+3,svm,bow,abstract,0.67,0.52,0.67,0.52,"{'C': 0.1, 'gamma': 0.1, 'kernel': 'linear'}"
+4,svm,bow,full_text,0.76,0.52,0.75,0.53,"{'C': 0.1, 'gamma': 0.1, 'kernel': 'linear'}"
+5,svm,bow,sec-text,0.74,0.47,0.75,0.5,"{'C': 0.1, 'gamma': 0.1, 'kernel': 'linear'}"
+6,knn,tfidf,abstract,0.76,0.48,0.75,0.5,"{'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 17, 'weights': 'uniform'}"
+7,knn,tfidf,full_text,0.6,0.4,0.58,0.47,"{'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 17, 'weights': 'uniform'}"
+8,knn,tfidf,sec-text,0.67,0.58,0.67,0.58,"{'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 12, 'weights': 'uniform'}"
+9,knn,bow,abstract,0.55,0.38,0.58,0.4,"{'algorithm': 'brute', 'metric': 'euclidean', 'n_neighbors': 12, 'weights': 'distance'}"
+10,knn,bow,full_text,0.64,0.57,0.67,0.58,"{'algorithm': 'brute', 'metric': 'manhattan', 'n_neighbors': 17, 'weights': 'distance'}"
+11,knn,bow,sec-text,0.51,0.39,0.5,0.43,"{'algorithm': 'brute', 'metric': 'manhattan', 'n_neighbors': 4, 'weights': 'uniform'}"
+12,bayes,tfidf,abstract,0.58,0.43,0.58,0.45,{'alpha': 10}
+13,bayes,tfidf,full_text,0.66,0.59,0.67,0.62,{'alpha': 0.1}
+14,bayes,tfidf,sec-text,0.76,0.65,0.75,0.65,{'alpha': 0.1}
+15,bayes,bow,abstract,0.66,0.47,0.67,0.48,{'alpha': 1.0}
+16,bayes,bow,full_text,0.68,0.58,0.67,0.6,{'alpha': 10}
+17,bayes,bow,sec-text,0.83,0.69,0.83,0.7,{'alpha': 1.0}
