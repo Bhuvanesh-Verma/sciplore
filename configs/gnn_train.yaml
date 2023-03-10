@@ -1,0 +1,27 @@
+data:
+  name: socio-t
+  loc: bin/model_data/trans_small_data.pkl
+model:
+  num_hidden: 64
+  num_heads: 8
+  num_layers: 2
+  dropout: 0.6
+
+train:
+  seed: 42
+  device: 'cuda' #'mps' or 'cuda' if high performance required else 'cpu'
+  load: False
+  ckpt: 'bin/models/Cora.pt'
+  epochs: 500
+  patience: 200
+  save: False
+  save_path: 'bin/models'
+
+optimizer:
+  lr: 5e-3
+  weight_decay: 5e-4
+
+wandb:
+  mode: disabled # {'online', 'run', 'offline', 'dryrun', 'disabled'}
+  entity: hpi-dc
+  project: cat-embed-small-socio-transductive
