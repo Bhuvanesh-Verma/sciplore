@@ -9,4 +9,5 @@ fasttext
 gensim
 setfit
 datasets
+frame-semantic-transformer
 # install torch based on your system requirements

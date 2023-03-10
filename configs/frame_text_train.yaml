@@ -1,0 +1,4 @@
+data_path: data/frame_text_dataset.json
+exp_type: frame # text
+model_name: sentence-transformers/paraphrase-mpnet-base-v2 # joeddav/xlm-roberta-large-xnli, MoritzLaurer/mDeBERTa-v3-base-mnli-xnli, facebook/bart-large-mnli
+max_token: 512

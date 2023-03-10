@@ -1,0 +1,45 @@
+data_path: data/frames_dataset.json
+feat_type: bow # bow, tfidf
+model_type: bayes
+params:
+  alpha:
+    - 0.1
+    - 1.0
+    - 10
+
+bayes:
+  alpha:
+    - 0.1
+    - 1.0
+    - 10
+svm:
+  C:
+    - 0.1
+    - 1
+    - 10
+  gamma:
+    - 0.1
+    - 1
+    - 10
+  kernel:
+    - linear
+    - rbf
+
+knn:
+  n_neighbors:
+    - 1
+    - 2
+    - 4
+    - 8
+    - 12
+    - 15
+    - 17
+    - 20
+  weights:
+    - uniform
+    - distance
+  metric:
+    - euclidean
+    - manhattan
+  algorithm:
+    - brute
