@@ -10,4 +10,6 @@ gensim
 setfit
 datasets
 frame-semantic-transformer
+tensorflow
+keras
 # install torch based on your system requirements
