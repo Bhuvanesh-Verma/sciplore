@@ -16,11 +16,10 @@ def predict(nli_model, tokenizer, sequence, labels):
     nli_model = nli_model.to(device)
     premise = sequence
     #hypothesis = {label: f'The given text follows {label} approach.' for label in labels}
-    hypothesis = {
-        'Quantitative': """Given text is primarily numerical using statistical methods and relies on measurements and calculations.""",
-        'Qualitative': """Given text is primarily focused on understanding subjective experiences and social phenomena using interviews, 
-                       observations, or case studies.""",
-        }
+    hypothesis = { 'Quantitative': """Quantitative is primarily numerical using statistical methods and relies on measurements and calculations.""",
+                   'Qualitative': """Qualitative is primarily focused on understanding subjective experiences and social phenomena using interviews, 
+                   observations, or case studies.""",
+                   }
     results = defaultdict(list)
     for label, h in hypothesis.items():
 
@@ -63,7 +62,7 @@ def zs_manual(texts, labels, model_name, max_token):
             indices_to_remove.append(k)
             print(f'Document {k} skipped')
             continue
-        label_scores = {u:label/sum(list(label_scores.values())) for u, label in label_scores.items()}
+        label_scores = {k:label/sum(list(label_scores.values())) for k, label in label_scores.items()}
 
         if any(0.33 < value < 0.67 for value in label_scores.values()):
             predicted_label = 'Qualitative and Quantitative'
@@ -123,7 +122,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '-data_type',
         help='type of data to use for modelling',
-        type=str, default='full_text',
+        type=str, default='abstract',
     )
 
 
