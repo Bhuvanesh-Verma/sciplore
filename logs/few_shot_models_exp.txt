@@ -5,40 +5,66 @@ Experiment for Data Type: abstract
 -------Split 1-------
                               precision    recall  f1-score   support
 
-                 Qualitative       0.33      0.50      0.40         4
-Qualitative and Quantitative       0.33      0.25      0.29         4
+                 Qualitative       0.40      0.50      0.44         4
+Qualitative and Quantitative       0.50      0.50      0.50         4
                 Quantitative       0.33      0.25      0.29         4
 
-                    accuracy                           0.33        12
-                   macro avg       0.33      0.33      0.32        12
-                weighted avg       0.33      0.33      0.32        12
+                    accuracy                           0.42        12
+                   macro avg       0.41      0.42      0.41        12
+                weighted avg       0.41      0.42      0.41        12
 
 
 -------Split 2-------
                               precision    recall  f1-score   support
 
                  Qualitative       0.60      0.75      0.67         4
+Qualitative and Quantitative       0.33      0.25      0.29         4
+                Quantitative       0.50      0.50      0.50         4
+
+                    accuracy                           0.50        12
+                   macro avg       0.48      0.50      0.48        12
+                weighted avg       0.48      0.50      0.48        12
+
+
+-------Split 3-------
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.50      0.75      0.60         4
 Qualitative and Quantitative       0.50      0.25      0.33         4
-                Quantitative       0.40      0.50      0.44         4
+                Quantitative       0.75      0.75      0.75         4
+
+                    accuracy                           0.58        12
+                   macro avg       0.58      0.58      0.56        12
+                weighted avg       0.58      0.58      0.56        12
+
+
+-------Split 4-------
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.60      0.75      0.67         4
+Qualitative and Quantitative       0.40      0.50      0.44         4
+                Quantitative       0.50      0.25      0.33         4
 
                     accuracy                           0.50        12
                    macro avg       0.50      0.50      0.48        12
                 weighted avg       0.50      0.50      0.48        12
 
 
--------Split 3-------
+-------Split 5-------
                               precision    recall  f1-score   support
 
-                 Qualitative       0.57      1.00      0.73         4
-Qualitative and Quantitative       1.00      0.25      0.40         4
-                Quantitative       0.75      0.75      0.75         4
+                 Qualitative       1.00      0.75      0.86         4
+Qualitative and Quantitative       0.44      1.00      0.62         4
+                Quantitative       0.00      0.00      0.00         4
 
-                    accuracy                           0.67        12
-                   macro avg       0.77      0.67      0.63        12
-                weighted avg       0.77      0.67      0.63        12
+                    accuracy                           0.58        12
+                   macro avg       0.48      0.58      0.49        12
+                weighted avg       0.48      0.58      0.49        12
 
 
--------Split 4-------
+Experiment for Data Type: full_text
+
+-------Split 1-------
                               precision    recall  f1-score   support
 
                  Qualitative       0.67      1.00      0.80         4
@@ -50,16 +76,114 @@ Qualitative and Quantitative       0.67      0.50      0.57         4
                 weighted avg       0.67      0.67      0.65        12
 
 
+-------Split 2-------
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.60      0.75      0.67         4
+Qualitative and Quantitative       0.67      0.50      0.57         4
+                Quantitative       0.50      0.50      0.50         4
+
+                    accuracy                           0.58        12
+                   macro avg       0.59      0.58      0.58        12
+                weighted avg       0.59      0.58      0.58        12
+
+
+-------Split 3-------
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.33      0.50      0.40         4
+Qualitative and Quantitative       0.00      0.00      0.00         4
+                Quantitative       0.25      0.25      0.25         4
+
+                    accuracy                           0.25        12
+                   macro avg       0.19      0.25      0.22        12
+                weighted avg       0.19      0.25      0.22        12
+
+
+-------Split 4-------
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.67      1.00      0.80         4
+Qualitative and Quantitative       0.50      0.75      0.60         4
+                Quantitative       0.00      0.00      0.00         4
+
+                    accuracy                           0.58        12
+                   macro avg       0.39      0.58      0.47        12
+                weighted avg       0.39      0.58      0.47        12
+
+
 -------Split 5-------
                               precision    recall  f1-score   support
 
-                 Qualitative       0.67      0.50      0.57         4
-Qualitative and Quantitative       0.38      0.75      0.50         4
+                 Qualitative       0.75      0.75      0.75         4
+Qualitative and Quantitative       0.50      1.00      0.67         4
                 Quantitative       0.00      0.00      0.00         4
 
+                    accuracy                           0.58        12
+                   macro avg       0.42      0.58      0.47        12
+                weighted avg       0.42      0.58      0.47        12
+
+
+Experiment for Data Type: sec-text
+
+-------Split 1-------
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.75      0.75      0.75         4
+Qualitative and Quantitative       0.67      0.50      0.57         4
+                Quantitative       0.40      0.50      0.44         4
+
+                    accuracy                           0.58        12
+                   macro avg       0.61      0.58      0.59        12
+                weighted avg       0.61      0.58      0.59        12
+
+
+-------Split 2-------
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.67      0.50      0.57         4
+Qualitative and Quantitative       0.50      0.50      0.50         4
+                Quantitative       0.60      0.75      0.67         4
+
+                    accuracy                           0.58        12
+                   macro avg       0.59      0.58      0.58        12
+                weighted avg       0.59      0.58      0.58        12
+
+
+-------Split 3-------
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.33      0.50      0.40         4
+Qualitative and Quantitative       0.00      0.00      0.00         4
+                Quantitative       0.50      0.75      0.60         4
+
                     accuracy                           0.42        12
-                   macro avg       0.35      0.42      0.36        12
-                weighted avg       0.35      0.42      0.36        12
+                   macro avg       0.28      0.42      0.33        12
+                weighted avg       0.28      0.42      0.33        12
+
+
+-------Split 4-------
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.75      0.75      0.75         4
+Qualitative and Quantitative       0.40      0.50      0.44         4
+                Quantitative       0.67      0.50      0.57         4
+
+                    accuracy                           0.58        12
+                   macro avg       0.61      0.58      0.59        12
+                weighted avg       0.61      0.58      0.59        12
+
+
+-------Split 5-------
+                              precision    recall  f1-score   support
+
+                 Qualitative       1.00      0.50      0.67         4
+Qualitative and Quantitative       0.50      1.00      0.67         4
+                Quantitative       0.50      0.25      0.33         4
+
+                    accuracy                           0.58        12
+                   macro avg       0.67      0.58      0.56        12
+                weighted avg       0.67      0.58      0.56        12
 
 
 Experiment for Data Type: sec-name
@@ -67,13 +191,13 @@ Experiment for Data Type: sec-name
 -------Split 1-------
                               precision    recall  f1-score   support
 
-                 Qualitative       1.00      0.25      0.40         4
-Qualitative and Quantitative       0.38      0.75      0.50         4
-                Quantitative       0.67      0.50      0.57         4
+                 Qualitative       0.67      0.50      0.57         4
+Qualitative and Quantitative       0.50      0.75      0.60         4
+                Quantitative       1.00      0.75      0.86         4
 
-                    accuracy                           0.50        12
-                   macro avg       0.68      0.50      0.49        12
-                weighted avg       0.68      0.50      0.49        12
+                    accuracy                           0.67        12
+                   macro avg       0.72      0.67      0.68        12
+                weighted avg       0.72      0.67      0.68        12
 
 
 -------Split 2-------
@@ -91,25 +215,25 @@ Qualitative and Quantitative       0.50      0.25      0.33         4
 -------Split 3-------
                               precision    recall  f1-score   support
 
-                 Qualitative       0.67      0.50      0.57         4
-Qualitative and Quantitative       0.38      0.75      0.50         4
-                Quantitative       1.00      0.25      0.40         4
+                 Qualitative       0.50      0.75      0.60         4
+Qualitative and Quantitative       0.50      0.50      0.50         4
+                Quantitative       1.00      0.50      0.67         4
 
-                    accuracy                           0.50        12
-                   macro avg       0.68      0.50      0.49        12
-                weighted avg       0.68      0.50      0.49        12
+                    accuracy                           0.58        12
+                   macro avg       0.67      0.58      0.59        12
+                weighted avg       0.67      0.58      0.59        12
 
 
 -------Split 4-------
                               precision    recall  f1-score   support
 
                  Qualitative       0.75      0.75      0.75         4
-Qualitative and Quantitative       0.57      1.00      0.73         4
-                Quantitative       1.00      0.25      0.40         4
+Qualitative and Quantitative       0.67      1.00      0.80         4
+                Quantitative       1.00      0.50      0.67         4
 
-                    accuracy                           0.67        12
-                   macro avg       0.77      0.67      0.63        12
-                weighted avg       0.77      0.67      0.63        12
+                    accuracy                           0.75        12
+                   macro avg       0.81      0.75      0.74        12
+                weighted avg       0.81      0.75      0.74        12
 
 
 -------Split 5-------
@@ -130,13 +254,13 @@ Experiment for Data Type: abstract
 -------Split 1-------
                               precision    recall  f1-score   support
 
-                 Qualitative       0.67      0.50      0.57         4
-Qualitative and Quantitative       0.50      1.00      0.67         4
+                 Qualitative       0.33      0.25      0.29         4
+Qualitative and Quantitative       0.38      0.75      0.50         4
                 Quantitative       1.00      0.25      0.40         4
 
-                    accuracy                           0.58        12
-                   macro avg       0.72      0.58      0.55        12
-                weighted avg       0.72      0.58      0.55        12
+                    accuracy                           0.42        12
+                   macro avg       0.57      0.42      0.40        12
+                weighted avg       0.57      0.42      0.40        12
 
 
 -------Split 2-------
@@ -154,25 +278,25 @@ Qualitative and Quantitative       0.25      0.25      0.25         4
 -------Split 3-------
                               precision    recall  f1-score   support
 
-                 Qualitative       0.50      0.75      0.60         4
-Qualitative and Quantitative       0.00      0.00      0.00         4
-                Quantitative       0.50      0.50      0.50         4
+                 Qualitative       0.50      0.50      0.50         4
+Qualitative and Quantitative       0.33      0.25      0.29         4
+                Quantitative       0.60      0.75      0.67         4
 
-                    accuracy                           0.42        12
-                   macro avg       0.33      0.42      0.37        12
-                weighted avg       0.33      0.42      0.37        12
+                    accuracy                           0.50        12
+                   macro avg       0.48      0.50      0.48        12
+                weighted avg       0.48      0.50      0.48        12
 
 
 -------Split 4-------
                               precision    recall  f1-score   support
 
                  Qualitative       0.80      1.00      0.89         4
-Qualitative and Quantitative       0.60      0.75      0.67         4
-                Quantitative       0.50      0.25      0.33         4
+Qualitative and Quantitative       1.00      0.75      0.86         4
+                Quantitative       0.75      0.75      0.75         4
 
-                    accuracy                           0.67        12
-                   macro avg       0.63      0.67      0.63        12
-                weighted avg       0.63      0.67      0.63        12
+                    accuracy                           0.83        12
+                   macro avg       0.85      0.83      0.83        12
+                weighted avg       0.85      0.83      0.83        12
 
 
 -------Split 5-------
@@ -187,18 +311,80 @@ Qualitative and Quantitative       0.29      0.50      0.36         4
                 weighted avg       0.35      0.42      0.37        12
 
 
-Experiment for Data Type: sec-name
+Experiment for Data Type: full_text
 
 -------Split 1-------
                               precision    recall  f1-score   support
 
-                 Qualitative       0.67      0.50      0.57         4
-Qualitative and Quantitative       0.43      0.75      0.55         4
-                Quantitative       1.00      0.50      0.67         4
+                 Qualitative       0.75      0.75      0.75         4
+Qualitative and Quantitative       0.57      1.00      0.73         4
+                Quantitative       1.00      0.25      0.40         4
+
+                    accuracy                           0.67        12
+                   macro avg       0.77      0.67      0.63        12
+                weighted avg       0.77      0.67      0.63        12
+
+
+-------Split 2-------
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.60      0.75      0.67         4
+Qualitative and Quantitative       0.67      0.50      0.57         4
+                Quantitative       0.75      0.75      0.75         4
+
+                    accuracy                           0.67        12
+                   macro avg       0.67      0.67      0.66        12
+                weighted avg       0.67      0.67      0.66        12
+
+
+-------Split 3-------
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.40      0.50      0.44         4
+Qualitative and Quantitative       0.33      0.25      0.29         4
+                Quantitative       0.75      0.75      0.75         4
+
+                    accuracy                           0.50        12
+                   macro avg       0.49      0.50      0.49        12
+                weighted avg       0.49      0.50      0.49        12
+
+
+-------Split 4-------
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.67      1.00      0.80         4
+Qualitative and Quantitative       0.50      0.75      0.60         4
+                Quantitative       0.00      0.00      0.00         4
 
                     accuracy                           0.58        12
-                   macro avg       0.70      0.58      0.59        12
-                weighted avg       0.70      0.58      0.59        12
+                   macro avg       0.39      0.58      0.47        12
+                weighted avg       0.39      0.58      0.47        12
+
+
+-------Split 5-------
+                              precision    recall  f1-score   support
+
+                 Qualitative       1.00      0.50      0.67         4
+Qualitative and Quantitative       0.40      1.00      0.57         4
+                Quantitative       0.00      0.00      0.00         4
+
+                    accuracy                           0.50        12
+                   macro avg       0.47      0.50      0.41        12
+                weighted avg       0.47      0.50      0.41        12
+
+
+Experiment for Data Type: sec-text
+
+-------Split 1-------
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.67      1.00      0.80         4
+Qualitative and Quantitative       0.75      0.75      0.75         4
+                Quantitative       1.00      0.50      0.67         4
+
+                    accuracy                           0.75        12
+                   macro avg       0.81      0.75      0.74        12
+                weighted avg       0.81      0.75      0.74        12
 
 
 -------Split 2-------
@@ -216,13 +402,75 @@ Qualitative and Quantitative       0.33      0.25      0.29         4
 -------Split 3-------
                               precision    recall  f1-score   support
 
+                 Qualitative       0.25      0.25      0.25         4
+Qualitative and Quantitative       0.33      0.25      0.29         4
+                Quantitative       0.60      0.75      0.67         4
+
+                    accuracy                           0.42        12
+                   macro avg       0.39      0.42      0.40        12
+                weighted avg       0.39      0.42      0.40        12
+
+
+-------Split 4-------
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.80      1.00      0.89         4
+Qualitative and Quantitative       1.00      1.00      1.00         4
+                Quantitative       1.00      0.75      0.86         4
+
+                    accuracy                           0.92        12
+                   macro avg       0.93      0.92      0.92        12
+                weighted avg       0.93      0.92      0.92        12
+
+
+-------Split 5-------
+                              precision    recall  f1-score   support
+
                  Qualitative       1.00      0.75      0.86         4
-Qualitative and Quantitative       0.50      0.75      0.60         4
-                Quantitative       0.67      0.50      0.57         4
+Qualitative and Quantitative       0.44      1.00      0.62         4
+                Quantitative       0.00      0.00      0.00         4
+
+                    accuracy                           0.58        12
+                   macro avg       0.48      0.58      0.49        12
+                weighted avg       0.48      0.58      0.49        12
+
+
+Experiment for Data Type: sec-name
+
+-------Split 1-------
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.57      1.00      0.73         4
+Qualitative and Quantitative       0.75      0.75      0.75         4
+                Quantitative       1.00      0.25      0.40         4
 
                     accuracy                           0.67        12
-                   macro avg       0.72      0.67      0.68        12
-                weighted avg       0.72      0.67      0.68        12
+                   macro avg       0.77      0.67      0.63        12
+                weighted avg       0.77      0.67      0.63        12
+
+
+-------Split 2-------
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.50      0.50      0.50         4
+Qualitative and Quantitative       0.33      0.25      0.29         4
+                Quantitative       0.60      0.75      0.67         4
+
+                    accuracy                           0.50        12
+                   macro avg       0.48      0.50      0.48        12
+                weighted avg       0.48      0.50      0.48        12
+
+
+-------Split 3-------
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.75      0.75      0.75         4
+Qualitative and Quantitative       0.25      0.25      0.25         4
+                Quantitative       0.50      0.50      0.50         4
+
+                    accuracy                           0.50        12
+                   macro avg       0.50      0.50      0.50        12
+                weighted avg       0.50      0.50      0.50        12
 
 
 -------Split 4-------
@@ -240,11 +488,11 @@ Qualitative and Quantitative       0.67      1.00      0.80         4
 -------Split 5-------
                               precision    recall  f1-score   support
 
-                 Qualitative       1.00      0.50      0.67         4
-Qualitative and Quantitative       0.50      1.00      0.67         4
+                 Qualitative       1.00      0.75      0.86         4
+Qualitative and Quantitative       0.57      1.00      0.73         4
                 Quantitative       1.00      0.50      0.67         4
 
-                    accuracy                           0.67        12
-                   macro avg       0.83      0.67      0.67        12
-                weighted avg       0.83      0.67      0.67        12
+                    accuracy                           0.75        12
+                   macro avg       0.86      0.75      0.75        12
+                weighted avg       0.86      0.75      0.75        12
 

@@ -33,7 +33,7 @@ def pipeline(dataset, data_type, config):
         test_dataset = {'text': X_test, 'label': y_test}
         test_dataset = Dataset.from_dict(test_dataset)
 
-        model = SetFitModel.from_pretrained(config['model_name'])
+        model = SetFitModel.from_pretrained(config['model_name'], use_differentiable_head=True, head_params={"out_features": 3})
 
         # Create trainer
         trainer = SetFitTrainer(
@@ -42,12 +42,16 @@ def pipeline(dataset, data_type, config):
             eval_dataset=test_dataset,
             loss_class=CosineSimilarityLoss,
             metric=compute_metrics,
-            batch_size=8,
+            batch_size=16,
             num_iterations=15,  # Number of text pairs to generate for contrastive learning
             num_epochs=2  # Number of epochs to use for contrastive learning
         )
         # Train and evaluate!
-        trainer.train()
+        trainer.freeze()
+        trainer.train(body_learning_rate=1e-5, num_epochs=1)
+        trainer.unfreeze(keep_body_frozen=True)
+        trainer.train(learning_rate=1e-3, num_epochs=70)
+        #trainer.train()
         metrics = trainer.evaluate()
         gold = [idx2label[int(l)] for l in y_test]
         preds = [idx2label[int(l)] for l in metrics['y_pred']]

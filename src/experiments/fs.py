@@ -35,7 +35,7 @@ if __name__ == '__main__':
     for model_name in ['sentence-transformers/paraphrase-mpnet-base-v2', 'sentence-transformers/all-mpnet-base-v2', ]:
         config_data['model_name'] = model_name
         print(model_name)
-        for data_type in ['abstract', 'sec-name']:
+        for data_type in ['abstract','full_text', 'sec-text', 'sec-name']:
             print(f'\nExperiment for Data Type: {data_type}')
             exp_results[model_name][data_type] = pipeline(dataset, data_type, config_data)
 
