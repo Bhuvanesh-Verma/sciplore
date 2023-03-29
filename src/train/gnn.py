@@ -3,6 +3,8 @@ import json
 import pickle
 import random
 from collections import defaultdict
+from os import listdir
+from os.path import join, isfile
 
 import networkx as nx
 import numpy as np
@@ -64,29 +66,25 @@ def evaluate(model, loss_fn, val_data, val_indices, device):
     return val_loss, val_mirco_f1, val_accuracy
 
 
-if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Arguments for multi label classification training')
-
-    parser.add_argument(
-        '-config',
-        help='Path to data config file',
-        type=str, default='configs/gnn_train.yaml',
-    )
-
-
-    args, remaining_args = parser.parse_known_args()
-
-    with open(args.config) as file:
-        config = yaml.safe_load(file)
-
-    with open('data/trans_feat_matrix.pkl', 'rb') as f:
-        data = pickle.load(f)
-
-    with open("data/frame_text_dataset.json", "r") as fd:
-        chunk_data = json.load(fd)
-
-    #Transductive
+def gnn_pipeline(data, chunk_data, config):
+    # Transductive
     feature_matrix = torch.tensor(data['feat'])
+    feat_type = config['data']['feat_type']
+    if feat_type == 'struc':
+        feature_matrix = feature_matrix[:, :5]
+    elif feat_type == 'struc+cat':
+        feature_matrix = feature_matrix[:, :505]
+    elif feat_type == 'cat':
+        feature_matrix = feature_matrix[:, 5:505]
+    elif feat_type == 'struc+emb':
+        feature_matrix = torch.cat((feature_matrix[:, :5], feature_matrix[:, 505:]), dim=1)
+    elif feat_type == 'cat+emb':
+        feature_matrix = feature_matrix[:, 5:]
+    elif feat_type == 'emb':
+        feature_matrix = feature_matrix[:, 505:]
+    else:
+        feature_matrix = feature_matrix
+
     G = data['graph']
     node_labels = defaultdict()
 
@@ -99,7 +97,7 @@ if __name__ == '__main__':
 
     model_data = get_transductive_data(G, feature_matrix, node_labels, label2id)
 
-    #Inductive
+    # Inductive
 
     """model_data = get_train_data(G, feature_matrix, node_labels, label2id)
     metadata = {'label2id': label2id, 'graph': G}"""
@@ -131,11 +129,12 @@ if __name__ == '__main__':
         num_features = data.x.shape[1]
         num_classes = len(label2id)
 
-        #pred_data = get_pred_data(G, node_features, labels)
+        # pred_data = get_pred_data(G, node_features, labels)
 
         # Create the GAT model
         model = GAT(in_channels=num_features, hidden_channels=config['model']['num_hidden'], out_channels=num_classes,
-                    heads=config['model']['num_heads'],num_layers=config['model']['num_layers'],dropout=config['model']['dropout'],  dtype=torch.float32)
+                    heads=config['model']['num_heads'], num_layers=config['model']['num_layers'],
+                    dropout=config['model']['dropout'], dtype=torch.float32)
         model.to(device)
 
         # Define a loss function and an optimizer
@@ -163,7 +162,7 @@ if __name__ == '__main__':
         model_info = []
         summary = defaultdict()
         for epoch in tqdm(range(config['train']['epochs'])):
-            train_loss, train_mirco_f1, train_accuracy = train(model, loss_fn, optimizer, data,train_indices, device)
+            train_loss, train_mirco_f1, train_accuracy = train(model, loss_fn, optimizer, data, train_indices, device)
             train_f1s.append(train_mirco_f1)
             train_accs.append(train_accuracy)
             val_loss, val_mirco_f1, val_accuracy = evaluate(model, loss_fn, data, val_indices, device)
@@ -216,9 +215,36 @@ if __name__ == '__main__':
     overall_summary['best_train_acc'] = max(best_train_accs)
     overall_summary['best_val_acc'] = max(best_val_accs)
 
-    overall_summary['avg_train_f1'] = np.around(np.mean(best_train_f1s),2)
-    overall_summary['avg_val_f1'] = np.around(np.mean(best_val_f1s),2)
-    overall_summary['avg_train_acc'] = np.around(np.mean(best_train_accs),2)
-    overall_summary['avg_val_acc'] = np.around(np.mean(best_val_accs),2)
+    overall_summary['avg_train_f1'] = np.around(np.mean(best_train_f1s), 2)
+    overall_summary['avg_val_f1'] = np.around(np.mean(best_val_f1s), 2)
+    overall_summary['avg_train_acc'] = np.around(np.mean(best_train_accs), 2)
+    overall_summary['avg_val_acc'] = np.around(np.mean(best_val_accs), 2)
 
     print(overall_summary)
+    return overall_summary
+
+
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='Arguments for multi label classification training')
+
+    parser.add_argument(
+        '-config',
+        help='Path to data config file',
+        type=str, default='configs/gnn_train.yaml',
+    )
+
+
+    args, remaining_args = parser.parse_known_args()
+
+    with open(args.config) as file:
+        config = yaml.safe_load(file)
+
+    with open('data/trans_feat_matrix.pkl', 'rb') as f:
+        data = pickle.load(f)
+
+    with open("data/frame_text_dataset.json", "r") as fd:
+        chunk_data = json.load(fd)
+
+    gnn_pipeline(data, chunk_data, config)
