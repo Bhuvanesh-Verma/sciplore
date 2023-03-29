@@ -1,27 +1,28 @@
 data:
   name: socio-t
-  loc: bin/model_data/trans_small_data.pkl
+  loc: bin/model_data/trans_small_data.pk
+  feat_type: cat+emb
 model:
-  num_hidden: 64
-  num_heads: 8
+  num_hidden: 16
+  num_heads: 16
   num_layers: 2
-  dropout: 0.6
+  dropout: 0.4252867365189017
 
 train:
   seed: 42
   device: 'cuda' #'mps' or 'cuda' if high performance required else 'cpu'
   load: False
-  ckpt: 'bin/models/Cora.pt'
-  epochs: 500
-  patience: 200
+  ckpt: 'models/gnn/all'
+  epochs: 8142
+  patience: 1177
   save: False
   save_path: 'bin/models'
 
 optimizer:
-  lr: 5e-3
-  weight_decay: 5e-4
+  lr: 0.008603733729592592
+  weight_decay: 0.0005
 
 wandb:
   mode: disabled # {'online', 'run', 'offline', 'dryrun', 'disabled'}
   entity: hpi-dc
-  project: cat-embed-small-socio-transductive
+  project: cat_emb_features_transductive

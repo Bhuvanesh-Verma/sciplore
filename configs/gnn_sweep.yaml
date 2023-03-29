@@ -1,0 +1,30 @@
+program: src/train/gnn_hpt.py
+method: bayes
+metric:
+  goal: maximize
+  name: avg_val_f1
+parameters:
+  epochs:
+    distribution: int_uniform
+    min: 1000
+    max: 10000
+  lr:
+    distribution: uniform
+    min: 0.0005
+    max: 0.01
+  num_hidden:
+    values: [16,32,64,128]
+  num_heads:
+    values: [4,8,16]
+  num_layers:
+    values: [2,4,8]
+  patience:
+    distribution: int_uniform
+    min: 300
+    max: 1500
+  dropout:
+    distribution: uniform
+    min: 0.4
+    max: 0.8
+  weight_decay:
+    values: [0.0005,0.0001,0.00005,0.001,0.005]
