@@ -1,0 +1,15 @@
+,model_type,data_type,best_f1,best_accuracy,avg_f1,avg_accuracy
+0,sentence-transformers/paraphrase-mpnet-base-v2,struc,0.4646464646464646,0.5833333333333334,0.42,0.52
+1,sentence-transformers/paraphrase-mpnet-base-v2,cat,0.8222222222222223,0.8333333333333334,0.7,0.7
+2,sentence-transformers/paraphrase-mpnet-base-v2,emb,0.9153439153439153,0.9166666666666666,0.72,0.75
+3,sentence-transformers/paraphrase-mpnet-base-v2,struc+cat,0.8333333333333334,0.8333333333333334,0.72,0.73
+4,sentence-transformers/paraphrase-mpnet-base-v2,struc+emb,0.8222222222222223,0.8333333333333334,0.7,0.72
+5,sentence-transformers/paraphrase-mpnet-base-v2,cat+emb,0.9153439153439153,0.9166666666666666,0.75,0.75
+6,sentence-transformers/paraphrase-mpnet-base-v2,all,0.8333333333333334,0.8333333333333334,0.7,0.7
+7,sentence-transformers/all-mpnet-base-v2,struc,0.4646464646464646,0.5833333333333334,0.42,0.52
+8,sentence-transformers/all-mpnet-base-v2,cat,0.8333333333333334,0.8333333333333334,0.73,0.73
+9,sentence-transformers/all-mpnet-base-v2,emb,0.8222222222222223,0.8333333333333334,0.72,0.72
+10,sentence-transformers/all-mpnet-base-v2,struc+cat,0.8333333333333334,0.8333333333333334,0.72,0.73
+11,sentence-transformers/all-mpnet-base-v2,struc+emb,0.9153439153439153,0.9166666666666666,0.71,0.72
+12,sentence-transformers/all-mpnet-base-v2,cat+emb,0.9153439153439153,0.9166666666666666,0.75,0.77
+13,sentence-transformers/all-mpnet-base-v2,all,0.8333333333333334,0.8333333333333334,0.73,0.73
