@@ -1,0 +1,96 @@
+
+Experiment for Data Type: abstract with uni
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.47      0.74      0.57        19
+Qualitative and Quantitative       0.50      0.58      0.54        19
+                Quantitative       0.80      0.21      0.33        19
+
+                    accuracy                           0.51        57
+                   macro avg       0.59      0.51      0.48        57
+                weighted avg       0.59      0.51      0.48        57
+
+
+Experiment for Data Type: full_text with uni
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.47      0.79      0.59        19
+Qualitative and Quantitative       0.33      0.37      0.35        19
+                Quantitative       1.00      0.21      0.35        19
+
+                    accuracy                           0.46        57
+                   macro avg       0.60      0.46      0.43        57
+                weighted avg       0.60      0.46      0.43        57
+
+
+Experiment for Data Type: sec-text with uni
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.43      0.63      0.51        19
+Qualitative and Quantitative       0.23      0.32      0.27        19
+                Quantitative       0.67      0.11      0.18        19
+
+                    accuracy                           0.35        57
+                   macro avg       0.44      0.35      0.32        57
+                weighted avg       0.44      0.35      0.32        57
+
+
+Experiment for Data Type: sec-name with uni
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.29      0.37      0.33        19
+Qualitative and Quantitative       0.36      0.47      0.41        19
+                Quantitative       0.75      0.32      0.44        19
+
+                    accuracy                           0.39        57
+                   macro avg       0.47      0.39      0.39        57
+                weighted avg       0.47      0.39      0.39        57
+
+
+Experiment for Data Type: abstract with uni-bi
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.45      0.74      0.56        19
+Qualitative and Quantitative       0.48      0.53      0.50        19
+                Quantitative       0.80      0.21      0.33        19
+
+                    accuracy                           0.49        57
+                   macro avg       0.58      0.49      0.46        57
+                weighted avg       0.58      0.49      0.46        57
+
+
+Experiment for Data Type: full_text with uni-bi
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.44      0.79      0.57        19
+Qualitative and Quantitative       0.26      0.26      0.26        19
+                Quantitative       1.00      0.21      0.35        19
+
+                    accuracy                           0.42        57
+                   macro avg       0.57      0.42      0.39        57
+                weighted avg       0.57      0.42      0.39        57
+
+
+Experiment for Data Type: sec-text with uni-bi
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.45      0.74      0.56        19
+Qualitative and Quantitative       0.26      0.32      0.29        19
+                Quantitative       0.67      0.11      0.18        19
+
+                    accuracy                           0.39        57
+                   macro avg       0.46      0.39      0.34        57
+                weighted avg       0.46      0.39      0.34        57
+
+
+Experiment for Data Type: sec-name with uni-bi
+                              precision    recall  f1-score   support
+
+                 Qualitative       0.29      0.37      0.33        19
+Qualitative and Quantitative       0.36      0.47      0.41        19
+                Quantitative       0.75      0.32      0.44        19
+
+                    accuracy                           0.39        57
+                   macro avg       0.47      0.39      0.39        57
+                weighted avg       0.47      0.39      0.39        57
+
