@@ -31,7 +31,7 @@ class SciDataset():
         preprocessor = Preprocessor(args)
         quan_p = preprocessor.preprocess_text(self.label_data['Quantitative'])
         qual_p = preprocessor.preprocess_text(self.label_data['Qualitative'])
-        mix_p = preprocessor.preprocess_text(self.label_data['Qualitative and Quantitative'])
+        mix_p = preprocessor.preprocess_text(self.label_data['Mixed'])
         qual, quan, mix = preprocessor.pos_preprocessing(docs=[qual_p, quan_p, mix_p])
         self.label_data['Quantitative'] = quan
         self.label_data['Qualitative'] = qual
