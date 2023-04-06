@@ -234,14 +234,19 @@ if __name__ == '__main__':
         help='Path to data config file',
         type=str, default='configs/gnn_train.yaml',
     )
-
+    parser.add_argument(
+        '-data_type',
+        help='type of data to use for modelling',
+        type=str, default='full_text',
+    )
 
     args, remaining_args = parser.parse_known_args()
+    data_type = args.data_type
 
     with open(args.config) as file:
         config = yaml.safe_load(file)
 
-    with open('data/trans_feat_matrix.pkl', 'rb') as f:
+    with open(f'data/trans_feat_matrix_{data_type}.pkl', 'rb') as f:
         data = pickle.load(f)
 
     with open("data/frame_text_dataset.json", "r") as fd:

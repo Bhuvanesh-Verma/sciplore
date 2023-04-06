@@ -12,4 +12,6 @@ datasets
 frame-semantic-transformer
 tensorflow
 keras
+torch_geometric
+wandb
 # install torch based on your system requirements

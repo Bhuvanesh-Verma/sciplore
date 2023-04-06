@@ -12,8 +12,10 @@ from sklearn.model_selection import StratifiedShuffleSplit
 from tqdm import tqdm
 from torch_geometric.data import Data
 
+from src.data.sci_dataset import SciDataset
+
 node_features = ['publisher', 'type', 'subject']
-embedding_features = ['articletitle', 'journaltitle', 'abstract']
+embedding_features = ['articletitle', 'journaltitle']
 
 
 def add_feature_to_nodes(G, paper_id, metadata):
@@ -129,7 +131,10 @@ def calculate_struct_features(graph, node,):
     return list(features.values())
 
 
-def generate_features():
+def generate_features(data_type='sec_name'):
+    embedding_features.append(data_type)
+    with open("data/dataset.json", "r") as fd:
+        full_dataset = json.load(fd)
     with open("data/new_citation_net.json", "r") as fd:
         citation_net = json.load(fd)
 
@@ -144,10 +149,16 @@ def generate_features():
     for doc_id, citations in citation_net.items():
         if doc_id in chunk_data:
             filter_data[doc_id] = citations
+            if data_type == 'sec_name':
+
+                idx = full_dataset['id'].index(doc_id)
+                metadata[doc_id][data_type] = ' '.join(full_dataset['sections'][idx])
+            else:
+                metadata[doc_id][data_type] = chunk_data[doc_id]['text'][data_type]
 
     G = nx.DiGraph()
 
-    device = 'cuda'
+    device = 'mps'
     only_embed = False
 
     for paper_id, cites in filter_data.items():
@@ -166,7 +177,7 @@ def generate_features():
     pagerank = nx.pagerank(G)
 
     model = SentenceTransformer(
-        'sentence-transformers/all-mpnet-base-v2')  # paraphrase-multilingual-mpnet-base-v2 all-mpnet-base-v2
+        'sentence-transformers/paraphrase-multilingual-mpnet-base-v2')  # paraphrase-multilingual-mpnet-base-v2 all-mpnet-base-v2
 
     # model = transformers.BertModel.from_pretrained('bert-base-uncased')
     tokenizer = transformers.BertTokenizer.from_pretrained('bert-base-uncased')
@@ -198,8 +209,13 @@ def generate_features():
             features.extend(one_hot_encode(node_feature2i, avail_node_features))
         for feature in embedding_features:
             if feature in G.nodes[node]:
-                feat_val = G.nodes[node][feature].lower()
-                embeds = model.encode(feat_val)
+                if feature in ['sec_text', 'full_text']:
+                    feat_vals = G.nodes[node][feature]
+                    embeds = model.encode(feat_vals)
+                    embeds = np.mean(embeds, axis=0)
+                else:
+                    feat_val = G.nodes[node][feature].lower()
+                    embeds = model.encode(feat_val)
                 feature_emebedding.append(embeds.tolist())
         if feature_emebedding:
             averaged_embeddings = np.mean(np.array(feature_emebedding), axis=0)
@@ -208,5 +224,5 @@ def generate_features():
             features.extend([0] * model.config.hidden_size)
         feature_matrix.append(features)
     feature_matrix = torch.tensor(feature_matrix)
-    with open('data/trans_feat_matrix.pkl', 'wb') as f:
+    with open(f'data/trans_feat_matrix_{data_type}_v2.pkl', 'wb') as f:
         pickle.dump({'feat':feature_matrix, 'graph':G}, f)
